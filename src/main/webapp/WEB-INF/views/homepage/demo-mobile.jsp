@@ -530,7 +530,7 @@
 		</table>
 	</div>
 
-	<<form id="attributeForm" action="#" method="post" onsubmit="return false;">
+	<form id="attributeForm" action="#" method="post" onsubmit="return false;">
 	<div id="attributeMenuContent" class="attributeWrap">
 		<div>
 			<h3>Object Attribute Search</h3>

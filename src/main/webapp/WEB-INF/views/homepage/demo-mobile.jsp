@@ -1730,14 +1730,14 @@
         var useTotalCountLabel = "<spring:message code='demo.data.statistics.use'/>";
         var forbidTotalCountLabel = "<spring:message code='demo.data.statistics.forbid'/>";
         var etcTotalCountLabel = "<spring:message code='demo.data.statistics.etc'/>";
-        var otpValues = [ useTotalCount, forbidTotalCount, etcTotalCount];
+        var dataValues = [ useTotalCount, forbidTotalCount, etcTotalCount];
         var ticks = [useTotalCountLabel, forbidTotalCountLabel, etcTotalCountLabel];
         var yMax = 100;
         if(useTotalCount > 100 || forbidTotalCount > 100 || etcTotalCount > 100) {
 			yMax = Math.max(useTotalCount, forbidTotalCount, etcTotalCount) + (useTotalCount * 0.2);
 		}
 
-        var plot = $.jqplot("dataStatusChart", [otpValues], {
+        var plot = $.jqplot("dataStatusChart", [dataValues], {
             //title : "data 상태별 차트",
             height: 205,
             animate: !$.jqplot.use_excanvas,
@@ -2014,7 +2014,7 @@
 		changeObjectInfoViewModeAPI(managerFactory, isShow);
 	}
 	// Origin 표시/비표
-    	function changeOrigin(isShow) {
+   	function changeOrigin(isShow) {
 		$("input:radio[name='origin']:radio[value='" + isShow + "']").prop("checked", true);
 		changeOriginAPI(managerFactory, isShow);
   	}
@@ -2027,6 +2027,19 @@
 	function changeObjectMove(objectMoveMode) {
 		$("input:radio[name='objectMoveMode']:radio[value='" + objectMoveMode + "']").prop("checked", true);
 		changeObjectMoveAPI(managerFactory, objectMoveMode);
+		// ALL 인 경우 Origin도 같이 표시
+        var originValue = $(':radio[name="origin"]:checked').val();
+        if(objectMoveMode === "0") {
+		    if(originValue === "true") {
+            } else {
+            }
+            changeOriginAPI(managerFactory, true);
+        } else {
+            if(originValue === "true") {
+            } else {
+                changeOriginAPI(managerFactory, false);
+            }
+        }
 	}
 	// 마우스 클릭 객체 이동 모드 변경 저장
 	$("#saveObjectMoveButton").click(function () {

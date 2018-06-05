@@ -60,7 +60,7 @@ public class ServletConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public LocaleResolver localeResolver() {
 		SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
-		sessionLocaleResolver.setDefaultLocale(Locale.KOREA);
+		//sessionLocaleResolver.setDefaultLocale(Locale.KOREA);
 		return sessionLocaleResolver;
 	}
 //	

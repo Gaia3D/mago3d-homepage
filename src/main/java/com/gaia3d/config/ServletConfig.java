@@ -1,8 +1,8 @@
 package com.gaia3d.config;
 
-import java.util.Locale;
 import java.util.Properties;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;
@@ -26,6 +26,10 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.support.RequestDataValueProcessor;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.gaia3d.interceptor.CSRFHandlerInterceptor;
+import com.gaia3d.interceptor.ConfigInterceptor;
+import com.gaia3d.interceptor.SecurityInterceptor;
+
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -34,10 +38,11 @@ import lombok.extern.slf4j.Slf4j;
  * @author Cheon JeongDae
  *
  */
+//@EnableSwagger2
 @Slf4j
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = { "com.gaia3d.config, com.gaia3d.controller, com.gaia3d.interceptor, com.gaia3d.validator, com.gaia3d.api" }, includeFilters = {
+@ComponentScan(basePackages = { "com.gaia3d.config, com.gaia3d.controller, com.gaia3d.interceptor, com.gaia3d.validator" }, includeFilters = {
 		@Filter(type = FilterType.ANNOTATION, value = Component.class),
 		@Filter(type = FilterType.ANNOTATION, value = Controller.class),
 		@Filter(type = FilterType.ANNOTATION, value = RestController.class)})
@@ -46,15 +51,15 @@ public class ServletConfig extends WebMvcConfigurerAdapter {
 	@Override
     public void addInterceptors(InterceptorRegistry registry) {
 		log.info(" @@@ ServletConfig addInterceptors @@@@ ");
-		
-//        registry.addInterceptor(new ConfigInterceptor())
-//        		.addPathPatterns("/**");
+//		registry.addInterceptor(new ConfigInterceptor())
+//        		.addPathPatterns("/**")
+//        		.excludePathPatterns("/css/**", "/externlib/**", "/f4d/**", "/images/**", "/js/**");
 //        registry.addInterceptor(new SecurityInterceptor())
 //        		.addPathPatterns("/**")
-//        		.excludePathPatterns("/login/**");
+//        		.excludePathPatterns("/login/**", "/css/**", "/externlib/**", "/f4d/**", "/images/**", "/js/**");
 //        registry.addInterceptor(new CSRFHandlerInterceptor())
 //        		.addPathPatterns("/**")
-//        		.excludePathPatterns("/login/**");
+//        		.excludePathPatterns("/login/**", "/css/**", "/externlib/**", "/f4d/**", "/images/**", "/js/**");
     }
 	
 	@Bean
@@ -82,8 +87,8 @@ public class ServletConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
 	public MessageSourceAccessor getMessageSourceAccessor(){
-		ReloadableResourceBundleMessageSource m = messageSource();
-		return new MessageSourceAccessor(m);
+		ReloadableResourceBundleMessageSource messageSourceAccessor = messageSource();
+		return new MessageSourceAccessor(messageSourceAccessor);
 	}
 	
 	@Override
@@ -109,25 +114,31 @@ public class ServletConfig extends WebMvcConfigurerAdapter {
     }
 
 	@Bean
-	public SimpleMappingExceptionResolver exceptionResolver() {
+	public SimpleMappingExceptionResolver simpleMappingExceptionResolver() {
 		log.info(" @@@ ServletConfig exceptionResolver @@@");
 		
-		SimpleMappingExceptionResolver exceptionResolver = new SimpleMappingExceptionResolver();
-	 
-		exceptionResolver.setOrder(1);
-		exceptionResolver.setDefaultErrorView("/error/default-error");
+		SimpleMappingExceptionResolver simpleMappingExceptionResolver = new SimpleMappingExceptionResolver();
 		
 		Properties exceptionMappings = new Properties();
-	 	exceptionMappings.put("com.gaia3d.exception.BusinessLogicException", "/error/business-error");
-	 	exceptionMappings.put("java.lang.RuntimeException", "/error/runtime-error");
-	 	exceptionResolver.setExceptionMappings(exceptionMappings);
+	 	exceptionMappings.put("BusinessLogicException", "/error/business-error");
+	 	exceptionMappings.put("RuntimeException", "/error/runtime-error");
+	 	exceptionMappings.put("Exception", "/error/error");
+	 	simpleMappingExceptionResolver.setExceptionMappings(exceptionMappings);
 	 	
-	 	exceptionResolver.addStatusCode("error", 404);
+	 	Properties statusCodes = new Properties();
+        statusCodes.put("/error/error", "403");
+        statusCodes.put("/error/error", "404");
+        statusCodes.put("/error/error", "500");
+        simpleMappingExceptionResolver.setStatusCodes(statusCodes);
+
+	 	simpleMappingExceptionResolver.setOrder(1);
+	 	simpleMappingExceptionResolver.setDefaultErrorView("/error/error");
 	 	
-	 	return exceptionResolver;
+	 	return simpleMappingExceptionResolver;
 	}
-	 
+	
 	@Bean
+	@ConditionalOnMissingBean(InternalResourceViewResolver.class)
 	public InternalResourceViewResolver viewResolver() {
 		log.info(" @@@ ServletConfig viewResolver @@@");
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();

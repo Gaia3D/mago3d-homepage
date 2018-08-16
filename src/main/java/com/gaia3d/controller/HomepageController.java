@@ -106,17 +106,22 @@ public class HomepageController {
 		if(lang == null || "".equals(lang)) {
 			lang = (String)request.getSession().getAttribute(SessionKey.LANG.name());
 			if(lang == null || "".equals(lang)) {
-				lang = "ko";
+				Locale myLocale = request.getLocale();
+				lang = myLocale.getLanguage();
 			}
 		}
 		
+		if(!Locale.KOREA.getLanguage().equals(lang) 
+				&& !Locale.ENGLISH.getLanguage().equals(lang)
+				&& !Locale.JAPAN.getLanguage().equals(lang)) {
+			// TODO Because it does not support multilingual besides English and Japanese Based on English
+			lang = "en";
+		}
+		
 		log.info("@@ lang = {}", lang);
-		if(Locale.KOREA.getLanguage().equals(lang) 
-				|| Locale.ENGLISH.getLanguage().equals(lang)
-				|| Locale.JAPAN.getLanguage().equals(lang)) {
+		if(lang != null && !"".equals(lang)) {
 			request.getSession().setAttribute(SessionKey.LANG.name(), lang);
 			Locale locale = new Locale(lang);
-//			LocaleResolver localeResolver = RequestContextUtils.getLocaleResolver(request);
 			localeResolver.setLocale(request, response, locale);
 		}
 		
@@ -331,7 +336,7 @@ public class HomepageController {
 	 * @return
 	 */
 	@GetMapping(value = "spec.do")
-	public String Spec(HttpServletRequest request, Model model) {
+	public String spec(HttpServletRequest request, Model model) {
 		String lang = null;
 		lang = (String)request.getSession().getAttribute(SessionKey.LANG.name());
 		if(lang == null || "".equals(lang)) {
@@ -379,7 +384,7 @@ public class HomepageController {
 	 * @return
 	 */
 	@GetMapping(value = "faq.do")
-	public String Faq(HttpServletRequest request, Model model) {
+	public String faq(HttpServletRequest request, Model model) {
 		String lang = null;
 		lang = (String)request.getSession().getAttribute(SessionKey.LANG.name());
 		if(lang == null || "".equals(lang)) {

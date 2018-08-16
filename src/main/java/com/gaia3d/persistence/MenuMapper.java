@@ -2,7 +2,6 @@ package com.gaia3d.persistence;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.gaia3d.domain.Menu;
@@ -24,10 +23,10 @@ public interface MenuMapper {
 	
 	/**
 	 * 메뉴 목록
-	 * @param default_yn
+	 * @param menu
 	 * @return
 	 */
-	public List<Menu> getListMenu(@Param("default_yn") String default_yn);
+	public List<Menu> getListMenu(Menu menu);
 	
 	/**
 	 * 메뉴 조회

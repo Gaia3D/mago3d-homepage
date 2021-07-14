@@ -25,6 +25,27 @@
 	});
 
 </script>
+
+<script type="text/javascript">
+	var nav = document.getElementsByTagName("header");
+
+	window.onscroll = function sticky() {
+	  if(window.pageYOffset > nav[0].offsetTop) {
+		nav[0].classList.add("nav");
+	  } else {
+		nav[0].classList.remove("nav");
+	  }
+	}
+</script>
+
+<style>
+	.nav{
+	  position: fixed;
+	  background: black; 
+	  background: rgba(0, 0, 0, 0.9);
+	}
+</style>
+
 </head>
 <body>
 	<div id="wrap">

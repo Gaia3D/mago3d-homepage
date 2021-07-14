@@ -82,9 +82,10 @@ img {border:0 none; vertical-align:top;}
 /*layout */
 #wrap {width:100%; height:auto; background:white; }
 #wrap > .top {width:100%; height:818px; background:url(../images/img_main.png) no-repeat center center; background-size:cover;}
+#wrap > .top02 {width:100%; height:90px; background:url(../images/top_bg.png) no-repeat center center; background-size:cover;}
 header {width:100%; bheight:50px; margin:0 auto; padding:0; padding-top:30px;}
-.h-center {width:1400px; text-align:center; height:50px; margin:0 auto; min-width:1400px;}
-.copyright {width:100%; height:428px; background:url(../images/bg_bottom.png) no-repeat; background-size:cover;}
+.h-center {width:1400px; text-align:center;  margin:0 auto; min-width:1400px;}
+.copyright {width:100%; margin-top:150px; height:428px; background:url(../images/bg_bottom.png) no-repeat; background-size:cover;}
 
 /*메인 */
 h1.mago3d {float:left; width:200px; cursor:pointer;height:30px;background:url(../images/mago.png) no-repeat;}
@@ -131,17 +132,17 @@ h3 {font-size:22px; color:black; padding:70px 0 70px 0; text-align:center;}
 .field04 {width:438px; height:358px; background:url(../images/field_img04.png) no-repeat; margin-right:40px;}
 .field05 {width:438px; height:358px; background:url(../images/field_img05.png) no-repeat;}
 .field-txtbg {width:438px; height:116px; margin-top:-116px;background:#1a1a30; opacity:0.8;}
-.field-tit {width:408px; display:block; text-align:left; padding:12px 15px 3px 15px; font-size:24px; color:white; font-weight:600;}
-.field-stit {display:block; width:408px; text-align:left; padding:0 15px 0 15px; font-size:16px; color:white;}
+.field-tit {width:408px; display:block; text-align:left; padding:12px 15px 3px 15px; font-size:23px; opacity:1; color:white; font-weight:600;}
+.field-stit {display:block; width:408px; text-align:left; padding:0 15px 0 15px; font-size:16px; opacity:1; color:white;}
 .go-field {display:inline-block; float:right; margin:20px 20px 0 0; width:45px; height:34px; background:#0092e2 url(../images/bullet_go.png) 50% 50% no-repeat;}
 
 /* copyright */
-.copyright .copyright-lft {float:left; width:590px; margin:50px 0 0 0; padding:0; text-align:left;}
+.copyright .copyright-lft {float:left; width:580px; margin:50px 0 0 0; padding:0; text-align:left;}
 .copyright .copyright-lft > .copyright-txt {font-size:16px; color:white;}
 .copyright .copyright-lft > .corp-t {font-size:20px; color:white; margin-top:30px;}
 .copyright .copyright-lft > .corp-info {font-size:15px; color:#aeb2d1; margin-top:5px;}
-.copyright .copyright-rgt {float:right; width:800px; margin:0; padding:0; }
-.copyright .copyright-rgt > ul {margin:50px 0 0 0; padding:0;}
+.copyright .copyright-rgt {float:left; width:800px; margin:50px 0 0 0; padding:0; }
+.copyright .copyright-rgt > ul {margin:0; padding:0;}
 .copyright .copyright-rgt > ul li {width:150px; list-style:none; display:inline-block; text-align:left; float:left; font-size:18px; color:white;}
 .copyright .copyright-rgt > ul li > ul {margin:30px 0 0 0; padding:0;}
 .copyright .copyright-rgt > ul li > ul li {list-style:none; padding:5px 0; text-align:left; display:block; font-family: 'NotoKrL'; font-size:15px; color:white;}
@@ -154,3 +155,13 @@ h3 {font-size:22px; color:black; padding:70px 0 70px 0; text-align:center;}
 .top_button {cursor:pointer; position:fixed; width:48px; height:48px; bottom: 30px; right:30px; background: url(../images/bullet_top.png);}
 .top_button:hover {position:fixed; width:48px; height:48px; bottom: 30px; right:30px; transition:0.3s; background: url(../images/bullet_top_over.png);}
 
+/* 테이블 */
+.tbl-product {width:900px; margin:0 auto; padding:0;}
+.tbl-product table {width:100%; margin:0 auto; border:2px solid #e9e9e9;}
+.tbl-product th {text-align:left; padding:16px 10px; font-size:17px; font-weight:600; border:1px solid #e9e9e9; color:#39386b; background:#f8f8f8;}
+.tbl-product td {text-align:center; padding:16px 2px; font-size:17px; border:1px solid #e9e9e9; color:#39386b; background:white;}
+.tbl-product td:first-child {text-align:left;}
+.tbl-product td.comment {font-size:15px; text-align:left; padding:10px 5px;}
+.tbl-product td.comment ul {margin:0 0 0 26px; padding:0;}
+.tbl-product td.comment ul li {font-size:15px; margin:0; padding:0;}
+span.check {display:inline-block; width:14px; height:14px; background:url(../images/bullet_check.png) no-repeat;}

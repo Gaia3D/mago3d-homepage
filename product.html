@@ -13,7 +13,7 @@
 <script language=javascript>
 	$(document).ready(function(){
 		$(document).scroll(function(){
-			if($(this).scrollTop() > 60) {
+			if($(this).scrollTop() > 90) {
 				$('#topBtn').fadeIn(500);
 			} else {
 				$('#topBtn').fadeOut(500);
@@ -23,7 +23,28 @@
 			$('html, body').animate({ scrollTop: 0 }, 500);
 		});
 	});
+	
 </script>
+<!-- menu scroll -->
+<script type="text/javascript">
+	var nav = document.getElementsByTagName("header");
+
+	window.onscroll = function sticky() {
+	  if(window.pageYOffset > nav[0].offsetTop) {
+		nav[0].classList.add("nav");
+	  } else {
+		nav[0].classList.remove("nav");
+	  }
+	}
+</script>
+<style>
+	.nav{
+	  position: fixed;
+	  background:url(include/images/top_bg.png) no-repeat ;
+	  background-size:cover;
+	  opacity:0.9;
+	}
+</style>
 </head>
 <body>
 	<div id="wrap">

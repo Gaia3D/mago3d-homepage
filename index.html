@@ -13,7 +13,7 @@
 <script language=javascript>
 	$(document).ready(function(){
 		$(document).scroll(function(){
-			if($(this).scrollTop() > 60) {
+			if($(this).scrollTop() > 90) {
 				$('#topBtn').fadeIn(500);
 			} else {
 				$('#topBtn').fadeOut(500);
@@ -23,9 +23,8 @@
 			$('html, body').animate({ scrollTop: 0 }, 500);
 		});
 	});
-
+	
 </script>
-
 <!-- menu scroll -->
 <script type="text/javascript">
 	var nav = document.getElementsByTagName("header");
@@ -38,18 +37,14 @@
 	  }
 	}
 </script>
-
 <style>
 	.nav{
 	  position: fixed;
-	  background: black; 
-	  background: rgba(0, 0, 0, 0.9);
-	}
-	.zoom:hover {
-  	transform: scale(1.1);
+	  background:url(include/images/top_bg.png) no-repeat ;
+	  background-size:cover;
+	  opacity:0.9;
 	}
 </style>
-
 </head>
 <body>
 	<div id="wrap">
@@ -100,7 +95,7 @@
 							<span class="tech02"></span>
 						</div>
 						<div class="feature-tit">Browser</div>
-						<div class="feature-stit">웹 브라우저 상에서 구동되며, 별도의 플러그인이나 Active-x 설치 불필요 </div>
+						<div class="feature-stit">웹 브라우저 상에서 구동되며, 별도의<br /> 플러그인이나 Active-x 설치 불필요 </div>
 					</div>
 					<div class="feature-s03">
 						<div class="sq-bg">
@@ -114,14 +109,14 @@
 							<span class="tech04"></span>
 						</div>
 						<div class="feature-tit">자동변환</div>
-						<div class="feature-stit">2D/3D데이터를 업로드, 자동변환, 웹 브라우저로 가시화</div>
+						<div class="feature-stit">2D/3D데이터를 업로드, 자동변환, <br />웹 브라우저로 가시화</div>
 					</div>
 					<div class="feature-s05">
 						<div class="sq-bg">
 							<span class="tech05"></span>
 						</div>
 						<div class="feature-tit">시뮬레이션</div>
-						<div class="feature-stit">현실에서 발생할 수 있는 각종 현상을 가상 공간에서 시뮬레이션</div>
+						<div class="feature-stit">현실에서 발생할 수 있는 각종 현상을<br /> 가상 공간에서 시뮬레이션</div>
 					</div>
 					<div class="feature-s06">
 						<div class="sq-bg">
@@ -148,7 +143,7 @@
 							<a class="go-field"></a>
 							<div class="field-txtbg">
 								<span class="field-tit" title="건축/건물/시설물 데모보기">건축/건물/시설물</span>
-								<span class="field-stit">시도,시군구 단위의 대용량 3차원 건물 데이터를 빠르게 가시화하고 건물 속성을 이용한 다양한 정보를 조회합니다. </span>
+								<span class="field-stit">시도,시군구 단위의 대용량 3차원 건물 데이터를 빠르게 <br />가시화하고 건물 속성을 이용한 다양한 정보를 조회합니다. </span>
 							</div>
 						</div>
 						<div class="field-s02">
@@ -156,7 +151,7 @@
 							<a class="go-field"  title="조선/항만/해양 데모보기"></a>
 							<div class="field-txtbg">
 								<span class="field-tit">조선/항만/해양</span>
-								<span class="field-stit">블록(배) 현황 및 속성, 이동체 관리, 다양한 레이어 가시화,IoT 센서 데이터 연동 등을 통한 야드(Yard)를 관리합니다. </span>
+								<span class="field-stit">블록(배) 현황 및 속성, 이동체 관리, 다양한 레이어 가시화,<br /> IoT 센서 데이터 연동 등을 통한 야드(Yard)를 관리합니다. </span>
 							</div>
 						</div>
 						<div class="field-s03">
@@ -164,7 +159,7 @@
 							<a class="go-field" title="환경 데모보기"></a>
 							<div class="field-txtbg">
 								<span class="field-tit">환경</span>
-								<span class="field-stit">바람, 대기질, 수자원, 토양, 소음 등 다양한 환경 분야를 시물레이션합니다.</span>
+								<span class="field-stit">바람, 대기질, 수자원, 토양, 소음 등 다양한 환경 분야를 <br />시물레이션합니다.</span>
 							</div>
 						</div>
 						<div class="field-s04">
@@ -172,7 +167,7 @@
 							<a class="go-field" title="교통/항공 데모보기"></a>
 							<div class="field-txtbg">
 								<span class="field-tit">교통/항공</span>
-								<span class="field-stit">자율주행, 차량관제, 드론 등 스마트 모빌리티 인프라 구축을 도와줍니다.</span>
+								<span class="field-stit">자율주행, 차량관제, 드론 등 스마트 모빌리티 인프라 구축을 <br />도와줍니다.</span>
 							</div>
 						</div>
 						<div class="field-s05">

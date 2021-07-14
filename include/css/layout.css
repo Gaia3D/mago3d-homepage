@@ -1,0 +1,156 @@
+﻿@charset "utf-8";
+
+/** 기본설정 **/
+body {margin:0; padding:0;	font-size:13px;	font-family: 'NotoKrR'; 	color:black;	height:100%;}
+body, div, p, h1,h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend,
+input, textarea, blockquote, button, strong, em, address {font-family:'NotoKrR';  font-weight:normal;font-size:14px;color:#555;}
+input, select { font-family: 'NotoKrR','dotum', serif, arial;}
+h1, h2 ,h3, h4, h5, h6 {font-size: 100%; font-weight: normal; }
+img {  border:0 none;vertical-align:top }
+img, fieldset { padding: 0; border: none; }
+legend, caption { width:0; height:0; font-size:0; line-height:0; overflow:hidden; visibility:hidden; display: none; }
+input { background: none; border: 0; padding-left:5px; }
+input[type=checkbox]{width:14px;height:14px;vertical-align:top;background:#fff;}
+input[type=radio]{width:14px;height:14px;vertical-align:top;background:#fff;}
+table {border:0; border-collapse: collapse; border-width:1px; border-spacing:0; }
+caption {position: absolute; overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0;}
+th, td {border-collapse:collapse;	border-width:1px;	color:#3c3c3c;}
+strong {font-weight:600;}
+address, em, cite {font-weight:normal; font-style:normal;}
+table th {font-weight:normal; vertical-align: middle;}
+table td {vertical-align: middle;}
+strong, em, address {font-style: normal;}
+q:before,q:after {content:"";}
+abbr,acronym {border:0; }
+.blind {overflow:hidden; visibility:hidden; position:absolute; width:0; height:0; font-size:0; line-height:0; }
+a { text-decoration: none; background: 0 none; color: #333;}
+textarea { background: none; border: 0; }
+button{border:none;padding:0;margin:0;}
+input[type=submit], input[tyfpe=reset], button{cursor: pointer;}
+a { margin: 0;   padding: 0;    font-size: 100%;    text-decoration: none;  vertical-align: middle;    background: transparent;}
+a:hover { color: #294aaa;    text-decoration:underline;}
+input[type="text"], input[type="password"], input[type="search"], input[type="file"], input[type="number"] {height: 28px;	padding: 4px 3px;	box-sizing: border-box;	border: 1px solid #cccccc;vertical-align: middle;-webkit-appearance: none; -moz-appearance: none;	-ms-appearance: none;	-o-appearance:none;	appearance:none;	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);background: #ffffff;}
+/* 웹폰트-본고딕 CSS */
+@font-face {
+font-family: 'NotoKrL';
+font-style: normal;
+font-weight: 100;
+src:url("../font/NotoSans-Light.eot");
+src:url("../font/NotoSans-Light.eot?#iefix") format('embedded-opentype'),
+url("../font/NotoSans-Light.woff2") format('woff2'),
+url("../font/NotoSans-Light.woff") format('woff'),
+url("../font/NotoSans-Light.ttf") format('truetype');
+}
+@font-face {
+font-family: 'NotoKrR';
+font-style: normal;
+font-weight: 300;
+src: url("../font/NotoSans-Regular.eot");
+src: url("../font/NotoSans-Regular.eot?#iefix") format('embedded-opentype'),
+url("../font/NotoSans-Regular.woff2") format('woff2'),
+url("../font/NotoSans-Regular.woff") format('woff'),
+url("../font/NotoSans-Regular.ttf") format('truetype');
+}
+@font-face {
+font-family: 'NotoKrM';
+font-style: normal;
+font-weight: 500;
+src: local('Noto Sans Medium'), local('NotoSans-Medium'); 
+src: url("../font/NotoSans-Medium.eot");
+src: url("../font/NotoSans-Medium.eot?#iefix") format('embedded-opentype'),
+url("../font/NotoSans-Medium.woff2") format('woff2'),
+url("../font/NotoSans-Medium.woff") format('woff'),
+url("../font/NotoSans-Medium.ttf") format('truetype');
+}
+@font-face {
+font-family: 'NotoKrB';
+font-style: normal;
+font-weight: 700;
+src: url("../font/NotoSans-Bold.eot");
+src: url("../font/NotoSans-Bold.eot?#iefix") format('embedded-opentype'),
+url("../font/NotoSans-Bold.woff2") format('woff2'),
+url("../font/NotoSans-Bold.woff") format('woff'),
+url("../font/NotoSans-Bold.ttf") format('truetype');
+}
+.blind {overflow:hidden; visibility:hidden; position:absolute; width:0; height:0; line-height:0; }
+body {margin:0; padding:0; font-size:13px; font-family:'NotoKrR'; color:#434343; height:100%;}
+a {margin:0; padding:0; color: #434343; cursor:pointer; font-size:100%; text-decoration:none; vertical-align:middle; background:transparent;}
+a:hover {color: #294aaa; text-decoration:none;}
+img {border:0 none; vertical-align:top;}
+#wrap, .top, .mago3d, ul.gnb {margin:0; padding:0;}
+
+/*layout */
+#wrap {width:100%; height:auto; background:white; }
+#wrap > .top {width:100%; height:818px; background:url(../images/img_main.png) no-repeat center center; background-size:cover;}
+header {width:100%; bheight:50px; margin:0 auto; padding:0; padding-top:30px;}
+.h-center {width:1400px; text-align:center; height:50px; margin:0 auto; min-width:1400px;}
+.copyright {width:100%; height:428px; background:url(../images/bg_bottom.png) no-repeat; background-size:cover;}
+
+/*메인 */
+h1.mago3d {float:left; width:200px; cursor:pointer;height:30px;background:url(../images/mago.png) no-repeat;}
+ul.gnb {}
+ul.gnb li {font-size:18px; display:inline-block; float:left; font-family:arial; color:white; line-height:28px; font-weight:600; padding:0 20px;}
+ul.gnb li a {color:white; }
+ul.gnb li a:hover {display:inline-block; border-top:2px solid #69d7ff; text-decoration:none; }
+.go-english {float:right; color:white; opacity:0.8; border:1px solid white; padding:4px 12px; }
+.topimg {width:1400px; margin:0 auto; min-width:1400px; padding-top:150px;}
+.big-t { font-size:46px; color:white; font-family: 'NotoKrB';}
+.mdl-t {font-size:22px; color:white; margin-top:20px; letter-spacing:1px;}
+.godemo {display:inline-block; padding:8px 50px 8px 20px; font-weight:600; font-size:20px; color:white; background:#ff6d1d url(../images/bullet_go.png) 92% 50% no-repeat; margin-top:80px; }
+.godemo:hover {background:#00c2e2 url(../images/bullet_go.png) 92% 50% no-repeat; color:white; transition:0.3s;}
+
+/* 타이틀 */
+h2 {clear:both; font-size:48px; font-weight:600; color:black; margin:0; padding:0; padding-top:130px; text-align:center;}
+h3 {font-size:22px; color:black; padding:70px 0 70px 0; text-align:center;}
+
+/* 서브 */
+.article01 {height:1140px;background:white;}
+.article02 {height:936px; background:url(../images/bg_feature.png) no-repeat; background-size:cover;}
+.article03 {height:1000px; background:white;}
+.article04 {height:1200px; background:#f6f6f6;}
+.article05 {height:1400px; background:white;}
+.feature {display:flex; flex-wrap:wrap; width:1400px; justify-content:space-around;}
+.feature-s01, .feature-s02 {margin-top:50px;}
+.feature-s01, .feature-s02, .feature-s03, .feature-s04, .feature-s05, .feature-s06 {width:600px; height:190px;}
+.feature-s05, .feature-s06 {height:160px !important;}
+.article03 img {display:inline-block; Text-align:center;}
+.sq-bg {float:left; width:144px; height:130px; margin-right:20px; background:url(../images/box_techimg.png) no-repeat;}
+.sq-bg .tech01 {display:inline-block; width:144px; height:130px; background:url(../images/img_tech01.png) center 24px no-repeat;}
+.sq-bg .tech02 {display:inline-block; width:144px; height:130px; background:url(../images/img_tech02.png) center 30px no-repeat;}
+.sq-bg .tech03 {display:inline-block; width:144px; height:130px; background:url(../images/img_tech03.png) center 24px no-repeat;}
+.sq-bg .tech04 {display:inline-block; width:144px; height:130px; background:url(../images/img_tech04.png) center 24px no-repeat;}
+.sq-bg .tech05 {display:inline-block; width:144px; height:130px; background:url(../images/img_tech05.png) center 24px no-repeat;}
+.sq-bg .tech06 {display:inline-block; width:144px; height:130px; background:url(../images/img_tech06.png) center 24px no-repeat;}
+.feature-tit{width:400px; float:left; text-align:left; font-weight:600; color:black; font-size:26px;}
+.feature-stit {float:left; width:400px; font-size:23px; text-align:left; color:black; margin-top:10px;}
+.field {display:flex; flex-wrap:wrap; width:1400px; justify-content:center;}
+.field-s01, .field-s02 {margin-bottom:50px;}
+.field01 {width:438px; height:358px; background:url(../images/field_img01.png) no-repeat; margin-right:40px;}
+.field02 {width:438px; height:358px; background:url(../images/field_img02.png) no-repeat; margin-right:40px;}
+.field03 {width:438px; height:358px; background:url(../images/field_img03.png) no-repeat; margin-right:40px; }
+.field04 {width:438px; height:358px; background:url(../images/field_img04.png) no-repeat; margin-right:40px;}
+.field05 {width:438px; height:358px; background:url(../images/field_img05.png) no-repeat;}
+.field-txtbg {width:438px; height:116px; margin-top:-116px;background:#1a1a30; opacity:0.8;}
+.field-tit {width:408px; display:block; text-align:left; padding:12px 15px 3px 15px; font-size:24px; color:white; font-weight:600;}
+.field-stit {display:block; width:408px; text-align:left; padding:0 15px 0 15px; font-size:16px; color:white;}
+.go-field {display:inline-block; float:right; margin:20px 20px 0 0; width:45px; height:34px; background:#0092e2 url(../images/bullet_go.png) 50% 50% no-repeat;}
+
+/* copyright */
+.copyright .copyright-lft {float:left; width:590px; margin:50px 0 0 0; padding:0; text-align:left;}
+.copyright .copyright-lft > .copyright-txt {font-size:16px; color:white;}
+.copyright .copyright-lft > .corp-t {font-size:20px; color:white; margin-top:30px;}
+.copyright .copyright-lft > .corp-info {font-size:15px; color:#aeb2d1; margin-top:5px;}
+.copyright .copyright-rgt {float:right; width:800px; margin:0; padding:0; }
+.copyright .copyright-rgt > ul {margin:50px 0 0 0; padding:0;}
+.copyright .copyright-rgt > ul li {width:150px; list-style:none; display:inline-block; text-align:left; float:left; font-size:18px; color:white;}
+.copyright .copyright-rgt > ul li > ul {margin:30px 0 0 0; padding:0;}
+.copyright .copyright-rgt > ul li > ul li {list-style:none; padding:5px 0; text-align:left; display:block; font-family: 'NotoKrL'; font-size:15px; color:white;}
+
+/* 마진 */
+.marB150 {padding-bottom:150px;}
+.marT70 {padding-top:70px;}
+
+/* 버튼 */
+.top_button {cursor:pointer; position:fixed; width:48px; height:48px; bottom: 30px; right:30px; background: url(../images/bullet_top.png);}
+.top_button:hover {position:fixed; width:48px; height:48px; bottom: 30px; right:30px; transition:0.3s; background: url(../images/bullet_top_over.png);}
+

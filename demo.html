@@ -16,24 +16,6 @@
 	  background-size:cover;
 	  opacity:0.9;
 	}
-	/* .modal{ 
-		position:absolute; 
-		width:100%; 
-		height:100%; 
-		background: rgba(0,0,0,0.8); 
-		top:0; 
-		left:0; 
-		display:none; 
-	}
-	.modal_content{
-		width:400px; height:200px;
-		background:#fff; border-radius:10px;
-		position:relative; top:50%; left:50%;
-		margin-top:-100px; margin-left:-200px;
-		text-align:center;
-		box-sizing:border-box; padding:74px 0;
-		line-height:23px; cursor:pointer;
-	} */
 
 	.modal {
             display: none; /* Hidden by default */
@@ -48,15 +30,6 @@
             background-color: rgba(0, 0, 0, 0.719); /* Black w/ opacity */
         }
     
-        /* Modal Content/Box */
-    /* .modal-content{
-		background:#fff; border-radius:10px;
-		position:relative; top:50%; left:50%;
-		margin-top:-200px; margin-left:-400px;
-		text-align:center;
-		box-sizing:border-box; padding:74px 0;
-		line-height:23px; cursor:pointer;
-	} */
 </style>
 <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
 <script language=javascript>
@@ -126,7 +99,7 @@
 			margin-top:-200px; margin-left:-400px;" width="800" height="600" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		<div class="h-center">
-			<h2 class="marB150">건축/건물/시설물</h2>			
+			<h2 id="demo01" class="marB150">건축/건물/시설물</h2>			
 			<div class="lf-bx">
 				<div class="demo-bx"><span class="play" value="https://www.youtube.com/embed/x2XI8q6Onjg"></span><img src="include/images/demo01.png" alt="lh데모" /></div>
 				<div class="demo-comment">
@@ -176,7 +149,7 @@
 					mago3D 통합 데모 영상입니다. BIM, OBJ, COLLADA 등 다양한 3D 설계 데이터를 빠르게 웹상에서 가시화하고 속성 조회 작업을 할 수 있습니다.
 				</span>	
 			</div>		
-			<h2 class="marB150">조선/항만/해양</h2>			
+			<h2 id="demo02" class="marB150">조선/항만/해양</h2>			
 			<div class="demo-bx"><span class="play" value="demo01"></span><img src="include/images/demo04.png" alt="항만 데모" /></div>
 			<div class="demo-comment">
 				<span class="demo">항구,컨테이너,선박구조물</span>		
@@ -184,7 +157,7 @@
 					항구의 컨테이너와 선박구조물 등의 이동체 관리, IoT 센서 데이터 연동을 통한 항구 내 안전관리를 합니다.
 				</span>	
 			</div>		
-			<h2 class="marB150">환경</h2>
+			<h2 id="demo03" class="marB150">환경</h2>
 			<div class="demo-bx"><span class="play" value="demo01"></span><img src="include/images/demo02.png" alt="제주바람장 데모" /></div>
 			<div class="demo-comment">
 				<span class="demo">제주도 30m 바람장 표출</span>		
@@ -192,7 +165,7 @@
 					나노웨더의 DEM자료를 활용하여 상세화한 수치모델 알파멧의 바람장을 mago3D에 표출한 데모입니다.
 				</span>	
 			</div>		
-			<h2 class="marB150">교통/항공</h2>
+			<h2 id="demo04" class="marB150">교통/항공</h2>
 			<div class="demo-bx"><span class="play" value="https://www.youtube.com/embed/x2XI8q6Onjg"></span><img src="include/images/demo03.png" alt="교통" /></div>
 			<div class="demo-comment">
 				<span class="demo">차량관제</span>		
@@ -200,7 +173,7 @@
 					송도 포인트 클라우드를 mago3D에 가시화하고 도로위에 차량 관제를 하는 데모입니다.
 				</span>	
 			</div>		
-			<h2 class="marB150">국방/기타</h2>	
+			<h2 id="demo05" class="marB150">국방/기타</h2>	
 			<div class="demo-bx"><span class="play" value="demo01"></span><img src="include/images/demo07.png" alt="문화재" /></div>
 			<div class="demo-comment">
 				<span class="demo">문화재 사례</span>		
@@ -219,52 +192,53 @@
 						<a href="mailto:info@gaia3d.com">info@gaia3d.com</a></div>
 				</div>
 				<div class="copyright-rgt">
-					<ul>
-						<li>About
-							<ul>
-								<li>개요</li>
-								<li>특징</li>
-								<li>흐름도</Li>
-								<li>적용분야</li>
-								<li>미래</li>
-							</ul>
-						</li>
-						<li>Product
-							<ul>
-								<li>CE/EE</li>
-								<li>아키텍쳐</li>
-								<li>구성요소</li>
-								<li>다운로드</li>
-								<li>제품사양서</li>								
-								<li>가격정책</li>	
-							</ul>
-						</li>
-						<li>Tech
-							<ul>
-								<li>자동변환</li>
-								<li>시뮬레이션</li>
-								<li>센서데이터</li>
-							</ul>
-						</li>
-						<li>Demo
-							<ul>
-								<li>건축/건물/시설물</li>
-								<li>조선/항만/해양</li>
-								<li>환경</li>
-								<li>교통/항공</li>
-								<li>국방/기터</li>
-							</ul>
-						</li>
-						<li>Support
-							<ul>
-								<li>설치가이드</li>
-								<li>사용자가이드</li>
-								<li>FAQ</li>
-								<li>Contact</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+					<div class="copyright-rgt">
+						<ul>
+							<li><a href="index.html">About</a>
+								<ul>
+									<li>개요</li>
+									<li>특징</li>
+									<li>흐름도</Li>
+									<li>적용분야</li>
+									<li>미래</li>
+								</ul>
+							</li>
+							<li><a class="footer-title" href="product.html">Product</a>
+								<ul>
+									<li>CE/EE</li>
+									<li>아키텍쳐</li>
+									<li>구성요소</li>
+									<li>다운로드</li>
+									<li>제품사양서</li>								
+									<li>가격정책</li>	
+								</ul>
+							</li>
+							<li><a class="footer-title" href="tech.html">Tech</a>
+								<ul>
+									<li>자동변환</li>
+									<li>시뮬레이션</li>
+									<li>센서데이터</li>
+								</ul>
+							</li>
+							<li><a class="footer-title" href="demo.html">Demo</a>
+								<ul>
+									<li>건축/건물/시설물</li>
+									<li>조선/항만/해양</li>
+									<li>환경</li>
+									<li>교통/항공</li>
+									<li>국방/기터</li>
+								</ul>
+							</li>
+							<li><a class="footer-title" href="support.html">Support</a>
+								<ul>
+									<li>설치가이드</li>
+									<li>사용자가이드</li>
+									<li>FAQ</li>
+									<li>Contact</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				<div id="topBtn" class="top-button" style="display:none;"></div>
 			</div>
 		</div>		

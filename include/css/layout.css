@@ -170,6 +170,26 @@ span.play:hover {opacity:0.8;}
 .demo-comment {width:610px; line-height:30px;  border:1px solid #f0f0f0; padding: 0 20px 20px 20px; vertical-align:top;}
 .lf-bx {width:650px; float:left;}
 .rg-bx {width:650px; float:right;}
+.faq {clear:both; list-style: none; width:1100px; margin: 0 auto; padding: 0;}
+.faq > li {padding: 15px 0; box-sizing: border-box; text-align:left;}
+.faq > li label {font-size:18px; text-align:left; margin-left:5px; font-weight:normal;}
+.faq > li div p  {font-size:17px; text-align:left; margin-left:0; font-weight:normal;}
+.faq > li:first-child {border-top: 1px solid #ededed;}
+.faq > li:nth-child(n+2){ border-top: 1px solid #ededed;}
+.faq > li:last-child {border-bottom: 1px solid #ededed;}
+.faq input { display: none;}
+.faq label {font-weight: bold; color: #000; margin: 10px 0 0; cursor: pointer; font-size:16px;}
+.faq label::before {display: block; content: ""; width: 0; height: 0; border: 8px solid transparent; border-left: 8px solid #404491; margin: 8px 0 0 8px; float: left;}
+.faq input:checked + label::before {border: 8px solid transparent; border-top: 8px solid #404491; border-bottom: 0; margin: 12px 4px 0;}
+.faq div {display: none; color: #666; font-size:16px; overflow: hidden; padding: 5px 0 0 30px; box-sizing: border-box; transition: max-height: 0.4s;}
+.faq input:checked + label + div {display: block;}
+.faq a {color:#325adb; text-decoration:underline; display:inline-block; margin-top:-3px;}
+.contact {clear:both; list-style: none; width:1100px; margin: 0 auto; padding: 0;}
+.contact > li {padding: 15px 0; box-sizing: border-box; text-align:center; line-height:40px; font-size:19px; }
+span.web, span.email, span.phone {width:300px; display:block; height:70px; font-size:18px; text-align:left; margin:0 auto; margin-top:10px; height:50px;}
+span.web {margin-top:40px; background:url(../images/bullet_web.png) no-repeat; text-indent:50px;}
+span.email {background:url(../images/bullet_email.png) no-repeat; text-indent:50px;}
+span.phone {background:url(../images/bullet_phone.png) no-repeat; text-indent:50px;}
 
 /* copyright */
 .copyright .copyright-lft {float:left; width:580px; margin:50px 0 0 0; padding:0; text-align:left;}
@@ -181,6 +201,10 @@ span.play:hover {opacity:0.8;}
 .copyright .copyright-rgt > ul li {width:150px; list-style:none; display:inline-block; text-align:left; float:left; font-size:18px; color:white;}
 .copyright .copyright-rgt > ul li > ul {margin:30px 0 0 0; padding:0;}
 .copyright .copyright-rgt > ul li > ul li {list-style:none; padding:5px 0; text-align:left; display:block; font-family: 'NotoKrL'; font-size:15px; color:white;}
+.footer-title {color: #ffffff;}
+.copyright a {color:#aeb2d1; font-weight:normal;}
+.copyright-rgt a {color:white;}
+.copyright a:hover {text-decoration:underline;}
 
 /* 마진 */
 .marB150 {clear:both; padding-bottom:150px;}
@@ -227,5 +251,3 @@ span.mago3d-tit {display:inline-block; float:left; width:950px; height:55px; lin
 .al-left {text-align:left !important;}
 .fs-up {font-size:19px !important; font-weight:600; padding:40px 0 !important;}
 
-/*footer*/
-.footer-title {color: #ffffff;}

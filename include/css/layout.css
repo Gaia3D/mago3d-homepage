@@ -85,6 +85,7 @@ img {border:0 none; vertical-align:top;}
 #wrap > .top02 {width:100%; height:90px; background:url(../images/top_bg.png) no-repeat center center; background-size:cover;}
 header {width:100%; height:60px; margin:0 auto; padding:0; padding-top:30px; z-index:999;}
 .h-center {width:1400px; text-align:center; margin:0 auto; min-width:1400px;}
+.h-left {width:1400px; text-align:left; margin:0 auto; min-width:1400px;}
 .copyright {clear:both; width:100%; height:428px; background:url(../images/bg_bottom.png) no-repeat; background-size:cover;}
 
 /*메인 */
@@ -92,7 +93,8 @@ h1.mago3d {float:left; width:200px; cursor:pointer;height:30px;background:url(..
 ul.gnb {}
 ul.gnb li {font-size:18px; display:inline-block; float:left; font-family:arial; color:white; line-height:28px; font-weight:600; padding:0 20px;}
 ul.gnb li a {color:white; }
-ul.gnb li a:hover {display:inline-block; border-top:2px solid #69d7ff; text-decoration:none; }
+ul.gnb li a:hover, ul.gnb li a.on {display:inline-block; border-top:2px solid #69d7ff; text-decoration:none; }
+
 .go-english {float:right; color:white; opacity:0.8; border:1px solid white; padding:3px 8px; }
 .go-english:hover {color:white; opacity:1;}
 .topimg {width:1400px; margin:0 auto; min-width:1400px; padding-top:150px;}
@@ -155,12 +157,12 @@ a.field05 {display:block; transition:all 0.4s ease-in-out; width:438px; height:3
 .txtbx-rgt {width:650px; font-size:20px; color:black;  float:left; text-align:left;}
 .imgbx-rgt {clear:both; float:right; width:auto; margin-right:50px; border:1px solid silver;}
 .txtbx-lft {width:600px; font-size:20px; color:black; float:left; text-align:left;}
-
+.dnimg {margin:6px 0 0 5px;}
 h4.tech {color:black; font-weight:600; font-size:24px !important; margin-top:0;}
 
 /* copyright */
 .copyright .copyright-lft {float:left; width:580px; margin:50px 0 0 0; padding:0; text-align:left;}
-.copyright .copyright-lft > .copyright-txt {font-size:16px; color:white;}
+.copyright .copyright-lft > .copyright-txt {font-size:16px; font-family: 'NotoKrL'; color:white; font-weight:normal;}
 .copyright .copyright-lft > .corp-t {font-size:20px; color:white; margin-top:30px;}
 .copyright .copyright-lft > .corp-info {font-size:15px; color:#aeb2d1; margin-top:5px;}
 .copyright .copyright-rgt {float:left; width:800px; margin:50px 0 0 0; padding:0; }
@@ -190,19 +192,22 @@ h4.tech {color:black; font-weight:600; font-size:24px !important; margin-top:0;}
 td.comment {text-align:left; padding:10px 10px 10px 2px;}
 td.comment ul {margin:0 0 0 26px; padding:0;}
 td.comment ul li {font-size:16px; margin:0; padding:0;}
-td.comment ul li a {text-decoration:underline; color:#1d63cd;}
+td.comment ul li a {color:#1d63cd;}
 h4.ce, h4.sb {width:1100px; margin:0 auto; text-align:left; padding:0 0 14px 0; font-weight:600;}
 h4.ogc {width:1300px; margin:0 auto; text-align:left; padding:0 0 14px 0; font-weight:600;}
 .w1300 {width:1300px;margin:0 auto; }
-.mago3d-dn {background:#f9f8f8; text-indent:40px; width:1100px; margin:0 auto; margin-top:5px; text-align:left; font-size:22px; color:black; height:70px; border:1px solid #ece9e9;}
+h5.w1300 a {color:black;}
+h5.w1300 ul {margin:20px 0 0 0; padding:0;}
+h5.w1300 ul li {font-size:19px; list-style:none;}
+.mago3d-dn {background:#f9f8f8; text-indent:40px; width:1100px; margin:0 auto; margin-top:5px; text-align:left; font-size:22px; color:black; height:55px; border:1px solid #ece9e9;}
 span.check {display:inline-block; width:14px; height:14px; background:url(../images/bullet_check.png) no-repeat;}
-span.mago3d-tit {display:inline-block; float:left; width:950px; height:70px; line-height:70px;}
-.mago3d-dn > a.document {display:inline-block; width:50px; float:left; height:70px; background:url(../images/ico_down.png) 0 18px no-repeat;}
-.mago3d-dn > a.download {display:inline-block; width:70px; float:left; height:70px;background:url(../images/ico_document.png) 20px 18px no-repeat;}
+span.mago3d-tit {display:inline-block; float:left; width:950px; height:55px; line-height:55px;}
+.mago3d-dn > a.document {display:inline-block; width:50px; float:left; height:55px; background:url(../images/ico_down.png) 0 10px no-repeat;}
+.mago3d-dn > a.download {display:inline-block; width:70px; float:left; height:55px;background:url(../images/ico_document.png) 20px 10px no-repeat;}
 .tbl-archi {width:1100px; margin:0 auto; padding:0;}
 .tbl-archi table {width:100%; margin:0 auto;}
-.tbl-archi th {text-align:center; padding:10px 10px; font-size:16px; border:1px solid #e9e9e9; color:#39386b; background:#f2f3f7;}
-.tbl-archi td {text-align:left; padding:10px 10px; font-family: 'NotoKrR'; font-size:16px; border:1px solid #e9e9e9; color:#5b5b5b; background:white;}
+.tbl-archi th {text-align:center; padding:7px; font-size:16px; border:1px solid #e9e9e9; color:#39386b; background:#f2f3f7;}
+.tbl-archi td {text-align:left; padding:7px; font-family: 'NotoKrR'; font-size:16px; border:1px solid #e9e9e9; color:#5b5b5b; background:white;}
 .tbl-spec {width:1100px; margin:0 auto; padding:0; border-top:2px solid #5261a7;}
 .tbl-spec table {width:100%; margin:0 auto; border-top:none;}
 .tbl-spec th {text-align:center; padding:10px 10px; font-size:16px; border-bottom:1px solid white; border-right:1px solid white; color:#39386b; background:#f2f3f7;}

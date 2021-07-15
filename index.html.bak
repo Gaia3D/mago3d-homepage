@@ -2,18 +2,18 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="Description" content="" />
-<meta name="Keywords" content="" />
-<meta name="author" content="" />
+<meta name="Description" content="mago3d 디지털트윈 플랫폼" />
+<meta name="Keywords" content="mago3d 디지털트윈 플랫폼" />
+<meta name="author" content="mago3d 디지털트윈 플랫폼" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-<title></title>
+<title>mago3d 디지털트윈 플랫폼</title>
 <link rel="stylesheet" href="include/css/layout.css" />
 <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
 <script language=javascript>
 	$(document).ready(function(){
 		$(document).scroll(function(){
-			if($(this).scrollTop() > 60) {
+			if($(this).scrollTop() > 90) {
 				$('#topBtn').fadeIn(500);
 			} else {
 				$('#topBtn').fadeOut(500);
@@ -23,21 +23,47 @@
 			$('html, body').animate({ scrollTop: 0 }, 500);
 		});
 	});
-
+	
 </script>
+<!-- menu scroll -->
+<script type="text/javascript">
+	$(document).ready(function(){
+   		$('#header').load("./header.html");
+    	$('#footer').load("./footer.html");
+		
+		nav[0].classList.remove("nav");
+	});
+	var nav = document.getElementsByTagName("header");
+
+	window.onscroll = function sticky() {
+	  if(window.pageYOffset > nav[0].offsetTop) {
+		nav[0].classList.add("nav");
+	  } else {
+		nav[0].classList.remove("nav");
+	  }
+	}
+</script>
+<style>
+	.nav{
+	  position: fixed;
+	  background:url(include/images/top_bg.png) no-repeat ;
+	  background-size:cover;
+	  opacity:0.9;
+	}
+</style>
 </head>
 <body>
 	<div id="wrap">
 		<div class="top">
-			<header>
+			<header class="nav">
 				<div class="h-center">
 					<h1 class="mago3d"><a href="#" class="blind">mago3d</a></h1>
 					<ul class="gnb">
-						<li><a href="#">About</a></li>
-						<li><a href="#">Product</a></li>
-						<li><a href="#">Tech</a></li>
-						<li><a href="#">Demo</a></li>
-						<li><a href="#">Support</a></li>
+						<li><a href="index.html" class="on">About</a></li>
+						<li><a href="product.html">Product</a></li>
+						<li><a href="tech.html">Tech</a></li>
+						<li><a href="demo.html">Demo</a></li>
+						<li><a href="support.html" class="on">Support</a></li>
 					</ul>
 					<a class="go-english">ENGLISH</a>
 				</div>
@@ -54,7 +80,7 @@
 			<div class="h-center">
 				<h2>개요</h2>
 				<h3>mago3D는 사용자가 초 대용량 3차원 BIM/AEC/GIS 데이터를 업로드, 자동변환, 웹 브라우저로 가시화, 공유, 협업하고<br />
-					현실에서 발생할 수 있는 각종 현상을 가상공간에서 시뮬레이션 하여,  현실 세계에 적용하여,<br />
+					현실에서 발생할 수 있는 각종 현상을 가상공간에서 시뮬레이션 및 현실 세계에 적용하여,<br />
 					 보다 안전하고 효율적인 현실세계를 구축하는 디지털트윈 플랫폼입니다.</h3>
 				<img src="include/images/mago_intro.png" width="1307" height="531" alt="mago3d는 디지털트윈플랫폼이다" />
 			</div>
@@ -75,7 +101,7 @@
 							<span class="tech02"></span>
 						</div>
 						<div class="feature-tit">Browser</div>
-						<div class="feature-stit">웹 브라우저 상에서 구동되며, 별도의 플러그인이나 Active-x 설치 불필요 </div>
+						<div class="feature-stit">웹 브라우저 상에서 구동되며, 별도의<br /> 플러그인이나 Active-x 설치 불필요 </div>
 					</div>
 					<div class="feature-s03">
 						<div class="sq-bg">
@@ -89,14 +115,14 @@
 							<span class="tech04"></span>
 						</div>
 						<div class="feature-tit">자동변환</div>
-						<div class="feature-stit">2D/3D데이터를 업로드, 자동변환, 웹 브라우저로 가시화</div>
+						<div class="feature-stit">2D/3D 데이터를 업로드, 자동변환, <br />웹 브라우저로 가시화</div>
 					</div>
 					<div class="feature-s05">
 						<div class="sq-bg">
 							<span class="tech05"></span>
 						</div>
 						<div class="feature-tit">시뮬레이션</div>
-						<div class="feature-stit">현실에서 발생할 수 있는 각종 현상을 가상 공간에서 시뮬레이션</div>
+						<div class="feature-stit">현실에서 발생할 수 있는 각종 현상을<br /> 가상 공간에서 시뮬레이션</div>
 					</div>
 					<div class="feature-s06">
 						<div class="sq-bg">
@@ -110,54 +136,49 @@
 		</div>
 		<div class="article03">
 			<div class="h-center">
-				<h2 class="marB45">흐름도</h2>
-				<img src="include/images/mago_flow.png" class="marT70" width=1176 height:557 alt="mago3d 흐름도, 2d/3d파일은 drag and drop easy upload가 가능하며 f3d coverter 변환, 최적화된 smart tiler기법, WMS를 사용하여 가시화 시뮬레이션한다." />
+				<h2 class="marB70">흐름도</h2>
+				<img src="include/images/mago_flow.png" class="marT70" width=1252 height=568alt="mago3d 흐름도, 2d/3d파일은 drag and drop easy upload가 가능하며 f3d coverter 변환, 최적화된 smart tiler기법, WMS를 사용하여 가시화 시뮬레이션한다." />
 			</div>
 		</div>
 		<div class="article04">
 			<div class="h-center">
 				<h2>적용분야</h2>
-					<div class="field marT70">
+					<div class="field">
 						<div class="field-s01">
-							<div class="field01">
-								<a class="go-field"></a>
-							</div>
+							<a href="#" class="field01"></a>
+							<a class="go-field"></a>
 							<div class="field-txtbg">
 								<span class="field-tit" title="건축/건물/시설물 데모보기">건축/건물/시설물</span>
-								<span class="field-stit">시도,시군구 단위의 대용량 3차원 건물 데이터를 빠르게 가시화하고 건물 속성을 이용한 다양한 정보를 조회합니다. </span>
+								<span class="field-stit">시도,시군구 단위의 대용량 3차원 건물 데이터를 빠르게 <br />가시화하고 건물 속성을 이용한 다양한 정보를 조회합니다. </span>
 							</div>
 						</div>
 						<div class="field-s02">
-							<div class="field02">
-								<a class="go-field"  title="조선/항만/해양 데모보기"></a>
-							</div>
+							<a href="#" class="field02"></a>
+							<a class="go-field"  title="조선/항만/해양 데모보기"></a>
 							<div class="field-txtbg">
 								<span class="field-tit">조선/항만/해양</span>
-								<span class="field-stit">블록(배) 현황 및 속성, 이동체 관리, 다양한 레이어 가시화,IoT 센서 데이터 연동 등을 통한 야드(Yard)를 관리합니다. </span>
+								<span class="field-stit">블록(배) 현황 및 속성, 이동체 관리, 다양한 레이어 가시화,<br /> IoT 센서 데이터 연동 등을 통한 야드(Yard)를 관리합니다. </span>
 							</div>
 						</div>
 						<div class="field-s03">
-							<div class="field03">
-								<a class="go-field" title="환경 데모보기"></a>
-							</div>
+							<a href="#" class="field03"></a>
+							<a class="go-field" title="환경 데모보기"></a>
 							<div class="field-txtbg">
 								<span class="field-tit">환경</span>
-								<span class="field-stit">바람, 대기질, 수자원, 토양, 소음 등 다양한 환경 분야를 시물레이션합니다.</span>
+								<span class="field-stit">바람, 대기질, 수자원, 토양, 소음 등 다양한 환경 분야를 <br />시물레이션합니다.</span>
 							</div>
 						</div>
 						<div class="field-s04">
-							<div class="field04">
-								<a class="go-field" title="교통/항공 데모보기"></a>
-							</div>
+							<a href="#" class="field04"></a>
+							<a class="go-field" title="교통/항공 데모보기"></a>
 							<div class="field-txtbg">
 								<span class="field-tit">교통/항공</span>
-								<span class="field-stit">자율주행, 차량관제, 드론 등 스마트 모빌리티 인프라 구축을 도와줍니다.</span>
+								<span class="field-stit">자율주행, 차량관제, 드론 등 스마트 모빌리티 인프라 구축을 <br />도와줍니다.</span>
 							</div>
 						</div>
 						<div class="field-s05">
-							<div class="field05">
-								<a class="go-field" title="국방/기타 데모보기" ></a>
-							</div>
+							<a href="#" class="field05"></a>
+							<a class="go-field" title="국방/기타 데모보기" ></a>
 							<div class="field-txtbg">
 								<span class="field-tit">국방/기타</span>
 								<span class="field-stit">다양한 공간분석을 통해 의사결정을 지원합니다.</span>
@@ -172,7 +193,7 @@
 				<h3>현재 mago3D는 가상 공간에서의 다양한 시뮬레이션 결과를 현실 세계에 반영하는 디지털트윈 3단계를 지나, <br />
 					4단계 연합, 5단계 디지털트윈을 자율 의지를 향해 나아가고 있습니다.<br />
 					이를 위해 다양한 IoT 센서 데이터, 빅데이터 분석, AI를 이용한 학습, 추론, 지각 기능 개발에 주력하고 있습니다.</h3>
-					<img src="include/images/mago_future.png" class="marT70 marB150" width="1187" height="588" alt="mago3d는 디지털트윈 3단계를 지나 4단계 연합, 5단계 디지털트윈 자율의지를 향해 나아가고 있습니다." />
+					<img src="include/images/mago_future.png" class="marT70" width="1214" height="603" alt="mago3d는 디지털트윈 3단계를 지나 4단계 연합, 5단계 디지털트윈 자율의지를 향해 나아가고 있습니다." />
 			</div>
 		</div>
 		<div class="copyright">
@@ -182,11 +203,11 @@
 					<div class="corp-t">가이아쓰리디㈜ </div>
 					<div class="corp-info">서울 금천구 벚꽃로 278 SJ테크노빌 702호<br />
 						T. 02 3397 3475     F. 02 6767 0979<br />
-						info@gaia3d.com</div>
+						<a href="mailto:info@gaia3d.com">info@gaia3d.com</a></div>
 				</div>
 				<div class="copyright-rgt">
 					<ul>
-						<li>About
+						<li><a href="index.html">About</a>
 							<ul>
 								<li>개요</li>
 								<li>특징</li>
@@ -195,25 +216,24 @@
 								<li>미래</li>
 							</ul>
 						</li>
-						<li>Product
+						<li><a class="footer-title" href="product.html">Product</a>
 							<ul>
 								<li>CE/EE</li>
 								<li>아키텍쳐</li>
 								<li>구성요소</li>
 								<li>다운로드</li>
-								<li>제품사양서</li>
-								<li>가격정책</li>>
+								<li>제품사양서</li>								
+								<li>가격정책</li>	
 							</ul>
 						</li>
-						<li>Tech
+						<li><a class="footer-title" href="tech.html">Tech</a>
 							<ul>
 								<li>자동변환</li>
 								<li>시뮬레이션</li>
-								<li>구성요소</li>
 								<li>센서데이터</li>
 							</ul>
 						</li>
-						<li>Demo
+						<li><a class="footer-title" href="index.html">Demo</a>
 							<ul>
 								<li>건축/건물/시설물</li>
 								<li>조선/항만/해양</li>
@@ -222,7 +242,7 @@
 								<li>국방/기터</li>
 							</ul>
 						</li>
-						<li>Support
+						<li><a class="footer-title" href="index.html">Support</a>
 							<ul>
 								<li>설치가이드</li>
 								<li>사용자가이드</li>
@@ -232,10 +252,9 @@
 						</li>
 					</ul>
 				</div>
-				<div id="topBtn" class="top_button" style="display:none;"></div>
+				<div id="topBtn" class="top-button" style="display:none;"></div>
 			</div>
-		</div>
-		
+		</div>		
 	</div>
 </body>
 </html>

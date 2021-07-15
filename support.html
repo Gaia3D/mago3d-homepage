@@ -1,0 +1,188 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="mago3d 디지털트윈 플랫폼" />
+<meta name="Keywords" content="mago3d 디지털트윈 플랫폼" />
+<meta name="author" content="mago3d 디지털트윈 플랫폼" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<title>mago3d 디지털트윈 플랫폼</title>
+<link rel="stylesheet" href="include/css/layout.css" />
+<script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
+<script language=javascript>
+	$(document).ready(function(){
+		$(document).scroll(function(){
+			if($(this).scrollTop() > 90) {
+				$('#topBtn').fadeIn(500);
+			} else {
+				$('#topBtn').fadeOut(500);
+			}
+		});		
+		$('#topBtn').click(function(){
+			$('html, body').animate({ scrollTop: 0 }, 500);
+		});
+	});
+	
+</script>
+<!-- menu scroll -->
+<script type="text/javascript">
+	var nav = document.getElementsByTagName("header");
+
+	window.onscroll = function sticky() {
+	  if(window.pageYOffset > nav[0].offsetTop) {
+		nav[0].classList.add("nav");
+	  } else {
+		nav[0].classList.remove("nav");
+	  }
+	}
+</script>
+<style>
+	.nav{
+	  position: fixed;
+	  background:url(include/images/top_bg.png) no-repeat ;
+	  background-size:cover;
+	  opacity:0.9;
+	}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="top02">
+			<header>
+				<div class="h-center">
+					<h1 class="mago3d"><a href="#" class="blind">mago3d</a></h1>
+					<ul class="gnb">
+						<li><a href="index.html">About</a></li>
+						<li><a href="product.html">Product</a></li>
+						<li><a href="tech.html">Tech</a></li>
+						<li><a href="demo.html">Demo</a></li>
+						<li><a href="support.html" class="on">Support</a></li>
+					</ul>
+					<a class="go-english">ENGLISH</a>
+				</div>
+			</header>
+		</div>	
+		<div class="h-center">
+			<h2>FAQ</h2>
+			<ul class="faq marT70">
+				<li>
+					<input type="checkbox" id="faq-1">
+					<label for="faq-1">mago3D란 무엇인가요</label>
+					<div>
+						<p>mago3D는 AEC(Architecture, Engineering, Construction) 영역과 전통적인 3차원 공간정보(3D GIS)를 통합적으로 관리, 가시화해 주는 차세대 3차원 플랫폼입니다.</p>
+					</div>
+				</li>
+				<li>
+					<input type="checkbox" id="faq-2">
+					<label for="faq-2">어떤 브라우저를 지원하나요</label>
+					<div>
+						<p>이 데모 페이지는 대용량 웹 데이터 처리를 위해 Chrome 브라우저에 최적화 되어 있습니다. <br />
+							원활한 서비스 이용을 위해 Chrome 브라우저를 이용 하시기 바랍니다.</p>
+					</div>
+				</li>
+				<li>
+					<input type="checkbox" id="faq-3">
+					<label for="faq-3">JT포맷을 사용하고 싶습니다. 어떻게 해야 하나요</label>
+					<div>
+						<p>JT포맷은 회사에 따로 연락해주셔야 합니다. 구체적인 질문이 있으시면 언제든지 <a href="mailto:info@gaia3d.com">info@gaia3d.com</a>으로 이메일을 보내주십시오!</p>
+					</div>
+				</li>
+				<li>
+					<input type="checkbox" id="faq-4">
+					<label for="faq-4">mago3DJS, mago3D Converter((구)F4D Converter)각 라이센스는 어떻게 사용해야 하나요</label>
+					<div>
+						<p>mago3D.js는 Apache2.0, mago3D Converter는 AGPL3.0을 기반으로 한 듀얼 라이센스를 따릅니다.<br />
+							mago3D  변환기를 사용하지만 소스 코드를 공개하지 않으려는 조직이나 개인은 Gaia3D(www.gaia3d.com)에서 상업용 라이센스를 취득해야 합니다. <br />
+							상업용 라이센스를 제외하고 모두 AGPL3.0의 적용을받으며 소스 코드가 공개되어 있습니다.  <br />
+							상업용 라이센스가 필요하거나 커스터마이징을 원하시면  <a href="mailto:info@gaia3d.com">info@gaia3d.com</a>으로 문의해 주시기 바랍니다.</p>
+					</div>
+				</li>
+				<li>
+					<input type="checkbox" id="faq-5">
+					<label for="faq-5">mago3DJS에서 버그를 발견했습니다. </label>
+					<div>
+						<p>모든 mago3DJS에 관련 버그를 mago3DJS issue tracker 에 제출하십시오.</p>
+					</div>
+				</li>
+				<li>
+					<input type="checkbox" id="faq-6">
+					<label for="faq-6">mago3D Converter((구)F4DConverter)에서 버그를 발견했습니다.</label>
+					<div>
+						<p>F4DConverter issue tracker에 제출하십시오. 감사합니다!</p>
+					</div>
+				</li>
+				<li>
+					<input type="checkbox" id="faq-7">
+					<label for="faq-7">데모페이지 로딩이 너무 느립니다.</label>
+					<div>
+						<p>mago3D는 Client-Side에서 대용량 3차원 데이터를 렌더링하기 때문에 GPU가속이 필요합니다.<br />
+							사용하시는 기기(PC, 노트북, mobile)가 지원하는 그래픽카드 성능에 따라 체감 속도가 크게 달라집니다.</p>
+					</div>
+				</li>
+			</ul>
+			<h2>Contact</h2>			
+			<div class="marB200"></div>
+		</div>	
+		<div class="copyright">
+			<div class="h-center">
+				<div class="copyright-lft">
+					<div class="copyright-txt"> ⓒ Copyrighst All rights reserved.</div>
+					<div class="corp-t">가이아쓰리디㈜ </div>
+					<div class="corp-info">서울 금천구 벚꽃로 278 SJ테크노빌 702호<br />
+						T. 02 3397 3475     F. 02 6767 0979<br />
+						<a href="mailto:info@gaia3d.com">info@gaia3d.com</a></div>
+				</div>
+				<div class="copyright-rgt">
+					<ul>
+						<li><a href="index.html">About</a>
+							<ul>
+								<li>개요</li>
+								<li>특징</li>
+								<li>흐름도</Li>
+								<li>적용분야</li>
+								<li>미래</li>
+							</ul>
+						</li>
+						<li><a href="product.html">Product</a>
+							<ul>
+								<li>CE/EE</li>
+								<li>아키텍쳐</li>
+								<li>구성요소</li>
+								<li>다운로드</li>
+								<li>제품사양서</li>								
+								<li>가격정책</li>	
+							</ul>
+						</li>
+						<li><a href="tech.html">Tech</a>
+							<ul>
+								<li>자동변환</li>
+								<li>시뮬레이션</li>
+								<li>센서데이터</li>
+							</ul>
+						</li>
+						<li><a href="Demo.html">Demo</a>
+							<ul>
+								<li>건축/건물/시설물</li>
+								<li>조선/항만/해양</li>
+								<li>환경</li>
+								<li>교통/항공</li>
+								<li>국방/기터</li>
+							</ul>
+						</li>
+						<li><a href="support.html">Support</a>
+							<ul>
+								<li>설치가이드</li>
+								<li>사용자가이드</li>
+								<li>FAQ</li>
+								<li>Contact</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="topBtn" class="top-button" style="display:none;"></div>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>

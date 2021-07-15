@@ -85,6 +85,7 @@ img {border:0 none; vertical-align:top;}
 #wrap > .top02 {width:100%; height:90px; background:url(../images/top_bg.png) no-repeat center center; background-size:cover;}
 header {width:100%; height:60px; margin:0 auto; padding:0; padding-top:30px; z-index:999;}
 .h-center {width:1400px; text-align:center; margin:0 auto; min-width:1400px;}
+.h-center02 {width:1200px; text-align:center; margin:0 auto; min-width:1200px;}
 .h-left {width:1400px; text-align:left; margin:0 auto; min-width:1400px;}
 .copyright {clear:both; width:100%; height:428px; background:url(../images/bg_bottom.png) no-repeat; background-size:cover;}
 
@@ -110,10 +111,10 @@ h4 {clear:both; font-size:21px; color:#2c2b67;}
 h5 {clear:both; font-size:18px; color:black; text-align:left;}
 
 /* 서브 */
-.article01 {height:1140px;background:white;}
-.article02 {height:936px; background:url(../images/bg_feature.png) no-repeat; background-size:cover;}
-.article03 {height:1150px; background:white;}
-.article04 {height:1300px; background:#f6f6f6;}
+.article01 {height:1250px;background:white;}
+.article02 {height:1000px; background:url(../images/bg_feature.png) no-repeat; background-size:cover;}
+.article03 {height:1120px; background:white;}
+.article04 {height:1350px; background:#f6f6f6;}
 .article05 {height:1400px; background:white;}
 .feature {display:flex; flex-wrap:wrap; width:1400px; margin-top:50px; justify-content:space-around;}
 .feature-s01, .feature-s02 {margin-top:50px;}
@@ -159,6 +160,16 @@ a.field05 {display:block; transition:all 0.4s ease-in-out; width:438px; height:3
 .txtbx-lft {width:600px; font-size:20px; color:black; float:left; text-align:left;}
 .dnimg {margin:6px 0 0 5px;}
 h4.tech {color:black; font-weight:600; font-size:24px !important; margin-top:0;}
+.demo-bx {clear:both; width:650px; margin:0 auto; height:400px; background:#f6f6f6; padding:0; }
+.demo-comment {width:610px; margin:0 auto;  line-height:30px;  border:1px solid #f0f0f0; padding: 0 20px 20px 20px; }
+span.demo {display:inline-block; margin: 15px 0 15px 0; padding:0; border:0; font-size:21px; color:black;}
+span.sdemo {display:inline-block;font-size:18px; margin:0; padding:0; text-align:left; line-height:26px; }
+span.play {display:inline-block; margin:170px 0 0 300px; cursor:pointer; padding:0; opacity:1; position:absolute; width:62px; height:62px; background:url(../images/bullet_play.png) no-repeat;}
+span.play:hover {opacity:0.8;}
+.demo-bx0 {width:650px; float:left; height:400px; background:#f6f6f6; padding:0; }
+.demo-comment {width:610px; line-height:30px;  border:1px solid #f0f0f0; padding: 0 20px 20px 20px; vertical-align:top;}
+.lf-bx {width:650px; float:left;}
+.rg-bx {width:650px; float:right;}
 
 /* copyright */
 .copyright .copyright-lft {float:left; width:580px; margin:50px 0 0 0; padding:0; text-align:left;}

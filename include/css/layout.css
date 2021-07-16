@@ -80,10 +80,10 @@ img {border:0 none; vertical-align:top;}
 #wrap, .top, .mago3d, ul.gnb {margin:0; padding:0;}
 
 /*layout */
-#wrap {width:100%; height:auto; background:white; }
+#wrap {width:100%; height:auto; background:white; min-width:1400px; overflow:hidden;}
 #wrap > .top {width:100%; height:818px; background:url(../images/img_main.png) no-repeat center center; background-size:cover;}
 #wrap > .top02 {width:100%; height:90px; background:url(../images/top_bg.png) no-repeat center center; background-size:cover;}
-header {width:100%; height:60px; margin:0 auto; padding:0; padding-top:30px; z-index:999;}
+header {width:100%; height:60px; margin:0 auto; padding:0; padding-top:30px; z-index:999; min-width:1400px; overflow:hidden;}
 .h-center {width:1400px; text-align:center; margin:0 auto; min-width:1400px; overflow:hidden;}
 .h-center02 {width:1200px; text-align:center; margin:0 auto; min-width:1200px; overflow:hidden;}
 .h-left {width:1400px; text-align:left; margin:0 auto; min-width:1400px;}

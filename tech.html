@@ -10,42 +10,7 @@
 <title>mago3d 디지털트윈 플랫폼</title>
 <link rel="stylesheet" href="include/css/layout.css" />
 <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
-<script language=javascript>
-	$(document).ready(function(){
-		$(document).scroll(function(){
-			if($(this).scrollTop() > 90) {
-				$('#topBtn').fadeIn(500);
-			} else {
-				$('#topBtn').fadeOut(500);
-			}
-		});		
-		$('#topBtn').click(function(){
-			$('html, body').animate({ scrollTop: 0 }, 500);
-		});
-	});
-	
-</script>
-<!-- menu scroll -->
-<script type="text/javascript">
-	var nav = document.getElementsByTagName("header");
-
-	window.onscroll = function sticky() {
-	  if(window.pageYOffset > nav[0].offsetTop) {
-		nav[0].classList.add("nav");
-	  } else {
-		nav[0].classList.remove("nav");
-	  }
-	}
-</script>
-<style>
-	.nav{
-	  position: fixed;
-	  background:url(include/images/top_bg.png) no-repeat ;
-	  background-size:cover;
-	  opacity:0.9;
-	}
-
-</style>
+<script src="include/js/controll.js"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -60,7 +25,7 @@
 						<li><a href="demo.html">Demo</a></li>
 						<li><a href="support.html">Support</a></li>
 					</ul>
-					<a class="go-english">ENGLISH</a>
+					<a class="go-english" onclick="maintenanceAlert()">ENGLISH</a>
 				</div>
 			</header>
 		</div>	
@@ -82,7 +47,7 @@
 			 			<td class="comment">
 			 				<ul>
 			 					<li>스마트 타일이란 3차원 데이터를 피라미드 타일 구조로 저장하고 전체 데이터를 불러오지 않으며 화면에 들어오고 카메라와의 거리를 따진 타일의 데이터만 호출하여 3D 가시화 성능 최적화를 위해 사용.<br />
-			 					<a href="#">스펙 문서 보기 <img src="include/images/bullet_dn.png" class="dnimg" alt="" /></a></li>
+			 					<a href="#" onclick="maintenanceAlert()">스펙 문서 보기 <img src="include/images/bullet_dn.png" class="dnimg" alt="" /></a></li>
 			 				</ul>
 			 			</td>
 			 		</tr>
@@ -100,7 +65,7 @@
 			 			<td class="comment">
 			 				<ul>
 			 					<li>DEM 데이터를 통해 타일을 생성하여 3차원 지형정보를 가시화<br />
-			 					<a href="#">Cesium Trrain ToolKit 기술안내 문서 보기<img src="include/images/bullet_dn.png" class="dnimg" alt="" /></a></li>
+			 					<a href="#" onclick="maintenanceAlert()">Cesium Trrain ToolKit 기술안내 문서 보기<img src="include/images/bullet_dn.png" class="dnimg" alt="" /></a></li>
 			 				</ul>
 			 			</td>
 			 		</tr>
@@ -205,7 +170,7 @@
 			<h4 class="ogc">OGC 표준 SensorThings API 사용</h4>
 			<h5 class="w1300">웹을 통해 사물 인터넷 장치, 데이터 및 응용 프로그램을 상호 연결하기 위한 OGC(국제 표준 기구) 표준 스펙입니다.<br />
 				<ul>
-					<li><a href="#">SensorThings API? 기술문서  <img src="include/images/bullet_dn.png" class="dnimg" alt="" /></a>
+					<li>SensorThings API? 기술문서
 				</li>
 					<li><a href="http://docs.opengeospatial.org/is/15-078r6/15-078r6.html">OGC SensorThings API Part1  <img src="include/images/bullet_dn.png" class="dnimg" alt="" /></a> 
 				</li>
@@ -266,7 +231,7 @@
 								<li>센서데이터</li>
 							</ul>
 						</li>
-						<li><a class="footer-title" href="index.html">Demo</a>
+						<li><a class="footer-title" href="demo.html">Demo</a>
 							<ul>
 								<li>건축/건물/시설물</li>
 								<li>조선/항만/해양</li>
@@ -275,7 +240,7 @@
 								<li>국방/기터</li>
 							</ul>
 						</li>
-						<li><a class="footer-title" href="index.html">Support</a>
+						<li><a class="footer-title" href="support.html">Support</a>
 							<ul>
 								<li>설치가이드</li>
 								<li>사용자가이드</li>

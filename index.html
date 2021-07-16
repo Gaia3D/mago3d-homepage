@@ -10,47 +10,7 @@
 <title>mago3d 디지털트윈 플랫폼</title>
 <link rel="stylesheet" href="include/css/layout.css" />
 <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
-<script language=javascript>
-	$(document).ready(function(){
-		$(document).scroll(function(){
-			if($(this).scrollTop() > 90) {
-				$('#topBtn').fadeIn(500);
-			} else {
-				$('#topBtn').fadeOut(500);
-			}
-		});		
-		$('#topBtn').click(function(){
-			$('html, body').animate({ scrollTop: 0 }, 500);
-		});
-	});
-	
-</script>
-<!-- menu scroll -->
-<script type="text/javascript">
-	$(document).ready(function(){
-   		$('#header').load("./header.html");
-    	$('#footer').load("./footer.html");
-		
-		nav[0].classList.remove("nav");
-	});
-	var nav = document.getElementsByTagName("header");
-
-	window.onscroll = function sticky() {
-	  if(window.pageYOffset > nav[0].offsetTop) {
-		nav[0].classList.add("nav");
-	  } else {
-		nav[0].classList.remove("nav");
-	  }
-	}
-</script>
-<style>
-	.nav{
-	  position: fixed;
-	  background:url(include/images/top_bg.png) no-repeat ;
-	  background-size:cover;
-	  opacity:0.9;
-	}
-</style>
+<script src="include/js/controll.js"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -65,7 +25,7 @@
 						<li><a href="demo.html">Demo</a></li>
 						<li><a href="support.html">Support</a></li>
 					</ul>
-					<a class="go-english">ENGLISH</a>
+					<a class="go-english" onclick="maintenanceAlert()">ENGLISH</a>
 				</div>
 			</header>
 			<div class="topimg">
@@ -73,7 +33,7 @@
 				<div class="mdl-t">객체는 도시의 과거이고, 센서데이터는 도시의 현재이며, 디지털트윈은 도시의 미래입니다. <br />
 					mago3D는 3차원 가시화, 시뮬레이션, 머신러닝(AI), IoT 센서, 빅데이터 분석을 통해 <br />
 					고객이 원하는 최적의 답을 제공합니다.  </div>
-				<a class="godemo" href="#">mago3D LIVE DEMO</a>
+				<a class="godemo" href="http://mago3d.net">mago3D LIVE DEMO</a>
 			</div>
 		</div>
 		<div class="article01">

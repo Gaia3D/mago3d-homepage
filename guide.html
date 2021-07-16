@@ -10,41 +10,7 @@
 <title>mago3d 디지털트윈 플랫폼</title>
 <link rel="stylesheet" href="include/css/layout.css" />
 <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
-<script language=javascript>
-	$(document).ready(function(){
-		$(document).scroll(function(){
-			if($(this).scrollTop() > 90) {
-				$('#topBtn').fadeIn(500);
-			} else {
-				$('#topBtn').fadeOut(500);
-			}
-		});		
-		$('#topBtn').click(function(){
-			$('html, body').animate({ scrollTop: 0 }, 500);
-		});
-	});
-	
-</script>
-<!-- menu scroll -->
-<script type="text/javascript">
-	var nav = document.getElementsByTagName("header");
-
-	window.onscroll = function sticky() {
-	  if(window.pageYOffset > nav[0].offsetTop) {
-		nav[0].classList.add("nav");
-	  } else {
-		nav[0].classList.remove("nav");
-	  }
-	}
-</script>
-<style>
-	.nav{
-	  position: fixed;
-	  background:url(include/images/top_bg.png) no-repeat ;
-	  background-size:cover;
-	  opacity:0.9;
-	}
-</style>
+<script src="include/js/controll.js"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -59,7 +25,7 @@
 						<li><a href="#">Demo</a></li>
 						<li><a href="#">Support</a></li>
 					</ul>
-					<a class="go-english">ENGLISH</a>
+					<a class="go-english" onclick="maintenanceAlert()">ENGLISH</a>
 				</div>
 			</header>
 		</div>	

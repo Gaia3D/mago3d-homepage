@@ -104,6 +104,8 @@ ul.gnb li a:hover, ul.gnb li a.on {display:inline-block; border-top:2px solid #6
 .godemo {display:inline-block; padding:8px 50px 8px 20px; font-weight:600; font-size:20px; color:white; background:#ff6d1d url(../images/bullet_go.png) 92% 50% no-repeat; margin-top:90px; }
 .godemo:hover {background:#00c2e2 url(../images/bullet_go.png) 92% 50% no-repeat; color:white; transition:0.3s;}
 
+.nav{position: fixed; background:url(../images/top_bg.png) no-repeat ; background-size:cover; opacity:0.9;}
+
 /* 타이틀 */
 h2 {clear:both; font-size:46px; font-weight:600; color:black; margin:0; padding:0; padding-top:80px; text-align:center;}
 h3 {clear:both; font-size:22px; color:black; padding:40px 0 70px 0; line-height:36px; text-align:center;}

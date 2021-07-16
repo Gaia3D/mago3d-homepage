@@ -10,12 +10,6 @@
 <title>mago3d 디지털트윈 플랫폼</title>
 <link rel="stylesheet" href="include/css/layout.css" />
 <style>
-	.nav{
-	  position: fixed;
-	  background:url(include/images/top_bg.png) no-repeat ;
-	  background-size:cover;
-	  opacity:0.9;
-	}
 
 	.modal {
             display: none; /* Hidden by default */
@@ -32,33 +26,9 @@
     
 </style>
 <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
-<script language=javascript>
-	$(document).ready(function(){
-		$(document).scroll(function(){
-			if($(this).scrollTop() > 90) {
-				$('#topBtn').fadeIn(500);
-			} else {
-				$('#topBtn').fadeOut(500);
-			}
-		});		
-		$('#topBtn').click(function(){
-			$('html, body').animate({ scrollTop: 0 }, 500);
-		});
-	});
-	
-</script>
-<!-- menu scroll -->
+<script src="include/js/controll.js"></script>
 <script type="text/javascript">
 	var nav = document.getElementsByTagName("header");
-
-	window.onscroll = function sticky() {
-	  if(window.pageYOffset > nav[0].offsetTop) {
-		nav[0].classList.add("nav");
-	  } else {
-		nav[0].classList.remove("nav");
-	  }
-	}
-
 	$(function(){ 
 		var modal = document.getElementById("modal");
 		var modalContent = document.getElementById("modal-content");
@@ -72,7 +42,6 @@
             }
         } 
 	});
-
 </script>
 
 </head>
@@ -89,7 +58,7 @@
 						<li><a href="demo.html" class="on">Demo</a></li>
 						<li><a href="support.html">Support</a></li>
 					</ul>
-					<a class="go-english">ENGLISH</a>
+					<a class="go-english" onclick="maintenanceAlert()">ENGLISH</a>
 				</div>
 			</header>
 		</div>
@@ -102,7 +71,7 @@
 			<h2 id="demo01" class="marT80">건축/건물/시설물</h2>			
 			<div class="marT70"></div>
 			<div class="lf-bx">
-				<div class="demo-bx"><span class="play" value="https://www.youtube.com/embed/x2XI8q6Onjg"></span><img src="include/images/demo01.png" alt="lh데모" /></div>
+				<div class="demo-bx"><span class="play" value="demo01"></span><img src="include/images/demo01.png" alt="lh데모" /></div>
 				<div class="demo-comment">
 					<span class="demo">LH 디지털트윈(Digitagl Twin) 1단계 사업성과</span>		
 					<span class="sdemo">

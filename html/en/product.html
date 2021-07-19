@@ -1,0 +1,433 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="mago3d Digital Twin Platform" />
+<meta name="Keywords" content="mago3d Digital Twin Platform" />
+<meta name="author" content="mago3d Digital Twin Platform" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<title>mago3d Digital Twin Platform</title>
+<link rel="stylesheet" href="../../include/en/css/layout.css" />
+<script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
+<script src="../../include/en/js/controll.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<div class="top02">
+			<header class="nav">
+				<div class="h-center">
+					<h1 class="mago3d"><a href="#" class="blind">mago3d</a></h1>
+					<ul class="gnb">
+						<li><a href="index.html">About</a></li>
+						<li><a href="product.html" class="on">Product</a></li>
+						<li><a href="tech.html">Tech</a></li>
+						<li><a href="demo.html">Demo</a></li>
+						<li><a href="support.html">Support</a></li>
+					</ul>>
+					<a href="../../html/ko/index.html" class="go-korean">KOREAN</a>
+				</div>
+			</header>
+		</div>	
+		<div class="h-center">
+			<h2>mago3D CE/EE</h2>
+			<h3>mago3D is an open source based digital twin platform. <br />
+				You can download the source from Github and use it for development and commercial purposes. <br />
+				If you need additional services such as customization, performance optimization, and technical support, you can use the commercial version, Enterprise Edition.
+			</h3>
+			<h4 class="ce">CE(Community Edition) EE(Enterprise Edition)</h4>
+			<div class="tbl-product">
+				<table>
+					<caption>CE/EE</caption>
+					<colgroup>
+						<col width="18%" />
+						<col width="42%" />
+						<col width="20%" />
+						<col width="20%" />
+					</colgroup>
+					<tr>
+						<th colspan="2"></th>
+						<th>CE(community)</th>
+						<th>EE(Enterprise)</th>
+					</tr>
+					<tr>
+						<td colspan="2"></td>
+						<td>OPEN</td>
+						<td>PRIVATE</td>
+					</tr>
+					<tr>
+						<td>F4D Converter</td>
+						<td class="comment">
+							<ul>
+								<li>Converts 3D files (citygml, indoorgml, ifc, 3ds, obj, collada(dae), etc.) to a format that a web browser can visualize</li>
+							</ul></td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Base Map</td>
+						<td class="comment">
+							<ul>
+								<li>Provides background maps that can be used in on-premises closed networks (NASA - Blue Marble satellite image)</li>
+							</ul>
+						</td>
+						<td></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Terrain Provider</td>
+						<td class="comment">
+							<ul>
+								<li>Create tiles through DEM data to visualize 3D topographic information</li>
+							</ul>
+						</td>
+						<td></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>GeowebCache</td>
+						<td class="comment">
+							<ul>
+								<li>Provides tile caching function to optimize performance of layers (background map, aerial image, satellite image, etc.)</li>
+							</ul>
+						</td>
+						<td></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Smart Tiling</td>
+						<td class="comment">
+							<ul>
+								<li>Smart tile stores 3D data in a pyramid tile structure, does not load the entire data, but calls only the tile data that enters the screen and measures the distance from the camera, and is used to optimize 3D visualization performance</li>
+							</ul>
+						</td>
+						<td></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>DB redundancy</td>
+						<td class="comment">
+							<ul>
+								<li>Provides a function to duplicate and manage the same database in order to recover the database service interruption or physical damage due to a system error</li>
+							</ul>
+						</td>
+						<td></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Training and technical support</td>
+						<td class="comment">
+							<ul>
+								<li>Provides education and technical support benefits for mago3D installation/development/operation</li>
+							</ul>
+						</td>
+						<td></td>
+						<td><span class="check"></span></td>
+					</tr>
+				</table>
+			</div>			
+			<h2 class="marB90">architecture</h2>
+			<h4 class="sb marB50">system architecture</h4>
+			<img src="../../include/en/images/img_architecture.png" class="marB90" width="1128" height="548" alt="architecture" />
+			<h4 class="sb">software architecture</h4>
+			<div class="tbl-archi">
+				<table>
+					<caption></caption>
+						<colgroup>
+						<col width="30%" />
+						<col width="28%" />
+						<col width="42%" />
+						</colgroup>
+					<tr>
+						<th rowspan="2">BackOffice</th>
+						<td>Log/Build</td>
+						<td>Logback/Gradle7</td>
+					</tr>
+					<tr>
+						<td>Schedule/Report</td>
+						<td>Quartz 2.4.0 / JasperReports 7.5</td>
+					</tr>
+					<tr>
+						<th rowspan="2">Presentation Layer</th>
+						<td>View</td>
+						<td>HTML5 + Thymeleaf 3.0.11 + Chart js 2.9.3</td>
+					</tr>
+					<tr>
+						<td>WebGL Globe </td>
+						<td>CesiumJS 1.70 + mago3D JS</td>
+					</tr>
+					<tr>
+						<th>Persistence Layer</th>
+						<td>RDBMS</td>
+						<td>PostgreSQL 13 + PostGIS 3.0</td>
+					</tr>
+					<tr>
+						<th rowspan="2">Data Conversion Layer</th>
+						<td>Message Queue</td>
+						<td>RabbitMQ 3.8.9</td>
+					</tr>
+					<tr>
+						<td>Data conversion Server</td>
+						<td>CesiumJS 1.70 + mago3D JS</td>
+					</tr>
+					<tr>
+						<th rowspan="2">Geospatial Data Layer</th>
+						<td>Terrain Server</td>
+						<td>GeoServer 2.17.3 + GeoWebCache 1.15.0</td>
+					</tr>
+					<tr>
+						<td>Geospatial Data Server</td>
+						<td>Docker Engine – CentOS(Community) / window 2.3.0.2</td>
+					</tr>
+					<tr>
+						<th rowspan="2">Business Layer</th>
+						<td>Business Server</td>
+						<td>mago3D Management System (User, Admin)</td>
+					</tr>
+					<tr>
+						<td>Framework</td>
+						<td>Spring 5 (Spring boot 2.5.1) + Mybatis 3.5.4</td>
+					</tr>
+					<tr>
+						<th rowspan="4">Infrastructure Layer</th>
+						<td>Languag</td>
+						<td>Java (OpenJDK 16)</td>
+					</tr>
+					<tr>
+						<td>WAS</td>
+						<td>Tomcat 9.0.35</td>
+					</tr>
+					<tr>
+						<td>Web Server</td>
+						<td>Nginx 1.16</td>
+					</tr>
+					<tr>
+						<td>OS</td>
+						<td>Linux Centos 7.6 / Window Server 2019</td>
+					</tr>		
+				</table>
+			</div>
+			<h2>Component</h2>
+			<h3>mago3D consists of a web data management system, a visualization engine library, and a data converter system.</h3>
+			<div class="compose">
+				<div class="compose01">	
+					<div class="compose-tit01">Web data management</div>		
+					<div class="compose-txt">
+						<ul>
+							<li>Data management function (2D/3D)</li>
+							<li>Management of various simulators</li>
+							<li>Interworking management using Rule-Based Management System</li>
+							<li>Provides management functions such as dashboard, user, role, menu, and environment setting</li>
+						</ul>
+					</div>				
+				</div>
+				<div class="compose02">		
+					<div class="compose-tit02">visualization engine mago3D JS</div>		
+					<div class="compose-txt">
+						<ul>
+							<li>3D data visualization function using pure web browser technology HTML, CSS, JAVASCRIPT</li>
+							<li>Cesium Glover Engine plug-in type driving using Deferred Rendering</li>
+						</ul>
+					</div>						
+				</div>
+				<div class="compose03">		
+					<div class="compose-tit03">mago3D Converter</div>		
+					<div class="compose-txt">
+						<ul>
+							<li>Converts various 3D files such as IFC, 3DS, OBJ, DAE, GML, LAS, JT, etc. into a format that a web browser can visualize</li>
+							<li>Performance optimization and attribute extraction for large data visualization  </li>
+						</ul>
+					</div>						
+				</div>
+				<div class="compose04">		
+					<div class="compose-tit04">Smart Tiler</div>		
+					<div class="compose-txt">
+						<ul>
+							<li>Performs 3D data tiling technique that improves network performance by reducing the number and capacity of large-scale heterogeneous 3D data contents in a web browser and providing high-speed/high-quality service </li>
+						</ul>
+					</div>						
+				</div>
+			</div>
+			<h2 class="marB90">Downloads/Documents</h2>
+			<div class="mago3d-dn">
+				<span class="mago3d-tit">mago3D</span>
+				<a href="https://github.com/Gaia3D/mago3d" class="document"></a>
+				<a href="https://github.com/Gaia3D/mago3d" class="download"></a>
+			</div>			
+			<div class="mago3d-dn">
+				<span class="mago3d-tit">mago3dJS</span>
+				<a href="https://github.com/Gaia3D/mago3djs" class="document"></a>
+				<a href="https://github.com/Gaia3D/mago3djs" class="download"></a>
+			</div>
+			<div class="mago3d-dn">
+				<span class="mago3d-tit">F4D Converter</span>
+				<a href="https://github.com/Gaia3D/NewF4DConverter" class="document"></a>
+				<a href="https://github.com/Gaia3D/NewF4DConverter" class="download"></a>
+			</div>
+			<h2 class="marB90">product specification sheet</h2>
+			<div class="tbl-spec">
+				<table>
+					<caption></caption>
+					<colgroup>
+						<col width="25%" />
+						<col width="25%" />
+						<col width="50%" />
+					</colgroup>
+				 <tr>
+			 		<th rowspan="4">user PC</th>
+			 		<th>OS</th>
+			 		<td>Window10 recommend</td>
+				 </tr>		
+				 <tr>
+				 	<th>browser</th>
+				 	<td>Chrome, Firefox, Edge</td>
+				 </tr>	
+				 <tr>
+				 	<th>Memory</th>
+				 	<td>8G or more</td>
+				 </tr>
+				 <tr>
+				 	<th>graphics card</th>
+				 	<td>Graphics card required, GTX 1050 or higher recommended</td>
+				 </tr> 
+				 <tr>
+				 	<th rowspan="6">server</th>
+				 	<th>OS</th>
+				 	<td>Windows 10, Windows Server 2012 or later<br />
+						CentOS 7 or RedHat 5.5 or later<br />
+						Ubuntu 10.04 or later<br />
+						Linux recommended
+				 		</td>
+				 </tr>
+				 <tr>
+				 	<th>CPU core</th>
+				 	<td>16 Core or higher recommended</td>
+				 </tr>
+				  <tr>
+				 	<th>Memory</th>
+				 	<td>At least 64G recommended</td>
+				 </tr>
+				  <tr>
+				 	<th>graphics card</th>
+				 	<td>GTX 1050 or higher</td>
+				 </tr>
+				  <tr>
+				 	<th>Volume</th>
+				 	<td>At least 5 terabytes recommended</td>
+				 </tr>
+				  <tr>
+				 	<th>RAID</th>
+				 	<td>necessary</td>
+				 </tr>
+				</table>
+			</div>
+			<h2 class="marB90">Pricing</h2>
+			<div class="tbl-spec">
+				<table>
+					<caption></caption>
+					<colgroup>
+						<col width="15%" />
+						<col width="15%" />
+						<col width="70%" />
+					</colgroup>
+				 <tr>
+			 		<th colspan="2">license</th>
+			 		<td>Package license (commercial license, no obligation to disclose source code)</td>
+			 	</tr>
+			 	<tr>
+			 		<th colspan="2">Maintenance</th>
+			 		<td>1 year repair (maintenance for 1 year after installation, maintenance rate of 20% after 1 year is applied)</td>
+			 	</tr>
+			 	<tr>
+			 		<th rowspan="4">technical support</th>
+			 		<th class="al-left">1) online application</th>
+			 		<td>Phone and email support during business hours (20 or less)</td>			 		
+			 	</tr>
+			 	<tr>
+			 		<th class="al-left">2) Visit support</th>
+			 		<td>Support for less than 4 visits (including installation)</td>
+			 	</tr>
+			 	<tr>
+			 		<th class="al-left">3) Education support</th>
+			 		<td>Chapter 2 (Developer Training Voucher)</td>
+			 	</tr>
+			 	<tr>
+			 		<th class="al-left">4) Etc</th>
+			 		<td>Visit support and educational support can be exchanged according to agreement
+						1.5 million won (1 time/day) when requesting additional visit support</td>
+			 	</tr>
+			 	<tr>
+			 		<th colspan="2">a supply price</th>
+			 		<td>separate inquiry</td>
+			 	</tr>
+			 	<tr>
+			 		<th colspan="2">Contact person</th>
+			 		<td>Kyu-Sung Choi Director(kschoi@gaia3d.com)</td>
+			 	</tr>
+				</table>
+			</div>
+			<div class="marB200"></div>
+		</div>	
+		<div class="copyright">
+			<div class="h-center">
+				<div class="copyright-lft">
+					<div class="copyright-txt">  Copyrights ⓒ  All rights reserved by Gaia3D , Inc.  </div>
+					<div class="corp-t">Gaia 3D Co. Ltd. </div>
+					<div class="corp-info">#702 SJ Technoville, 278, Cherry Blossom-ro, Geumcheon-gu, Seoul<br />
+						T. 02 3397 3475     F. 02 6767 0979<br />
+						<a href="mailto:info@gaia3d.com">info@gaia3d.com</a>
+					</div>
+				</div>
+				<div class="copyright-rgt">
+					<ul>
+						<li><a href="index.html">About</a>
+							<ul>
+								<li>summary</li>
+								<li>Characteristic</li>
+								<li>flow chart</Li>
+								<li>Applications</li>
+								<li>future</li>
+							</ul>
+						</li>
+						<li><a class="footer-title" href="product.html">Product</a>
+							<ul>
+								<li>CE/EE</li>
+								<li>architecture</li>
+								<li>Component</li>
+								<li>Download</li>
+								<li>product specification sheet</li>								
+								<li>Pricing</li>	
+							</ul>
+						</li>
+						<li><a class="footer-title" href="tech.html">Tech</a>
+							<ul>
+								<li>automatic conversion</li>
+								<li>simulation</li>
+								<li>sensor data</li>
+							</ul>
+						</li>
+						<li><a class="footer-title" href="demo.html">Demo</a>
+							<ul>
+								<li>Architecture/Building/Facility</li>
+								<li>Shipbuilding/Port/Marine</li>
+								<li>Environment</li>
+								<li>Transportation/Air</li>
+								<li>Defense/Others</li>
+							</ul>
+						</li>
+						<li><a class="footer-title" href="support.html">Support</a>
+							<ul>
+								<li>installation guide</li>
+								<li>User Guide</li>
+								<li>FAQ</li>
+								<li>Contact</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="topBtn" class="top-button" style="display:none;"></div>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>

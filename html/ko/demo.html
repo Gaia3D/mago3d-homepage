@@ -1,0 +1,219 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="mago3d 디지털트윈 플랫폼" />
+<meta name="Keywords" content="mago3d 디지털트윈 플랫폼" />
+<meta name="author" content="mago3d 디지털트윈 플랫폼" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<title>mago3d 디지털트윈 플랫폼</title>
+<link rel="stylesheet" href="../../include/ko/css/layout.css" />
+<style>
+
+	.modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.719); /* Black w/ opacity */
+        }
+    
+</style>
+<script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
+<script src="../../include/ko/js/controll.js"></script>
+<script type="text/javascript">
+	var nav = document.getElementsByTagName("header");
+	$(function(){ 
+		var modal = document.getElementById("modal");
+		var modalContent = document.getElementById("modal-content");
+		$(".play").click(function(){
+			$('#modal-content').attr('src', $(this).attr("value"));
+			modal.style.display = "block"; 
+		}); 
+		window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        } 
+	});
+</script>
+
+</head>
+<body>
+	<div id="wrap">
+		<div class="top02">
+			<header>
+				<div class="h-center">
+					<h1 class="mago3d"><a href="#" class="blind">mago3d</a></h1>
+					<ul class="gnb">
+						<li><a href="index.html">About</a></li>
+						<li><a href="product.html">Product</a></li>
+						<li><a href="tech.html">Tech</a></li>
+						<li><a href="demo.html" class="on">Demo</a></li>
+						<li><a href="support.html">Support</a></li>
+					</ul>
+					<a href="../../html/en/index.html" class="go-english">ENGLISH</a>
+				</div>
+			</header>
+		</div>
+		<div id="modal" class="modal">
+			<iframe id="modal-content" style="border-radius:10px;
+			position:relative; top:50%; left:50%;
+			margin-top:-200px; margin-left:-400px;" width="800" height="600" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="h-center">
+			<h2 id="demo01" class="marT80">건축/건물/시설물</h2>			
+			<div class="marT70"></div>
+			<div class="lf-bx">
+				<div class="demo-bx"><span class="play" value="demo01"></span><img src="../../include/ko/images/demo01.png" alt="lh데모" /></div>
+				<div class="demo-comment">
+					<span class="demo">LH 디지털트윈(Digitagl Twin) 1단계 사업성과</span>		
+					<span class="sdemo">
+					2020년 6월부터 2021년 3월까지 진행된 LH공사 디지털트윈 1단계 구축 사업의 성과 동영상입니다. <br />					
+					LH 디지털트윈 1단계 사업의 주요 내용은, 1. 3기 신도시 3D 데이터 구축 및 서비스, 2. 지구계획/경관시뮬레이션 기능 개발, 
+					3. OGC SensorThings API를 활용한 IoT 연계 서비스입니다.
+					</span>	
+				</div>		
+			</div>
+			<div class="rg-bx">
+				<div class="demo-bx"><span class="play" value="https://www.youtube.com/embed/Vqix5vtUEhk"></span><img src="../../include/ko/images/demo05.png" alt="cityGml데모" /></div>
+				<div class="demo-comment">					
+					<span class="demo">CityGML and IndoorGML</span>		
+					<span class="sdemo">
+					CityGML과 IndoorGML 자료를 mago3D에 표현한 사례입니다.<br />
+					 (본 사례는 국토교통부 국토공간정보연구사업의 연구비지원(18NSIP-B135746-02)을 받아 수행한 연구 결과입니다.)
+					 <br /> <br /> <br />
+					</span>	
+				</div>			
+			</div>	
+			<div class="marT70"></div>	
+			<div class="lf-bx">
+				<div class="demo-bx"><span class="play" value="demo01"></span><img src="../../include/ko/images/demo06.png" alt="실내/실외 연결 데모" /></div>
+				<div class="demo-comment">
+					<span class="demo">실내/실외 연결 데모</span>		
+					<span class="sdemo">	
+					mago3D는 BIM으로 구축된 건물의 실내와 실외를 지리정보 위에서 단절없이 연동할 수 있습니다. 실내에서 창문을 통해 외부 경관을 조회할 수 있습니다.
+					 <br /> <br />				
+					</span>	
+				</div>	
+			</div>
+			<div class="rg-bx">
+				<div class="demo-bx"><span class="play" value="demo01"></span><img src="../../include/ko/images/demo09.png" alt="남극과학기지 데모" /></div>
+				<div class="demo-comment">
+					<span class="demo">남극과학기지 웹기반 3차원 시설/기장비 관리시스템</span>		
+					<span class="sdemo">
+					세종기지 건물 및 장비 관리를 위해 3차원 데이터를 구축하고 mago3D 플랫폼을 활용하여 
+					3차원으로 가시화하고 각 시설물을 관리할 수 있는 웹기반 시설물 관리 시스템을 개발하였습니다
+					</span>	
+				</div>			
+			</div>	
+			<div class="marT70"></div>	
+			<div class="demo-bx"><span class="play" value="https://www.youtube.com/embed/b1ZW_8gTOOI"></span><img src="../../include/ko/images/demo08.png" alt="mago3D통합 데모" /></div>
+			<div class="demo-comment">
+				<span class="demo">mago3D통합 데모 영상</span>		
+				<span class="sdemo">
+					mago3D 통합 데모 영상입니다. BIM, OBJ, COLLADA 등 다양한 3D 설계 데이터를 빠르게 웹상에서 가시화하고 속성 조회 작업을 할 수 있습니다.
+				</span>	
+			</div>		
+			<h2 id="demo02" class="marB70">조선/항만/해양</h2>			
+			<div class="demo-bx"><span class="play" value="demo01"></span><img src="../../include/ko/images/demo04.png" alt="항만 데모" /></div>
+			<div class="demo-comment">
+				<span class="demo">항구,컨테이너,선박구조물</span>		
+				<span class="sdemo">
+					항구의 컨테이너와 선박구조물 등의 이동체 관리, IoT 센서 데이터 연동을 통한 항구 내 안전관리를 합니다.
+				</span>	
+			</div>		
+			<h2 id="demo03" class="marB70">환경</h2>
+			<div class="demo-bx"><span class="play" value="demo01"></span><img src="../../include/ko/images/demo02.png" alt="제주바람장 데모" /></div>
+			<div class="demo-comment">
+				<span class="demo">제주도 30m 바람장 표출</span>		
+				<span class="sdemo">
+					나노웨더의 DEM자료를 활용하여 상세화한 수치모델 알파멧의 바람장을 mago3D에 표출한 데모입니다.
+				</span>	
+			</div>		
+			<h2 id="demo04" class="marB70">교통/항공</h2>
+			<div class="demo-bx"><span class="play" value="https://www.youtube.com/embed/x2XI8q6Onjg"></span><img src="../../include/ko/images/demo03.png" alt="교통" /></div>
+			<div class="demo-comment">
+				<span class="demo">차량관제</span>		
+				<span class="sdemo">
+					송도 포인트 클라우드를 mago3D에 가시화하고 도로위에 차량 관제를 하는 데모입니다.
+				</span>	
+			</div>		
+			<h2 id="demo05" class="marB70">국방/기타</h2>	
+			<div class="demo-bx"><span class="play" value="demo01"></span><img src="../../include/ko/images/demo07.png" alt="문화재" /></div>
+			<div class="demo-comment">
+				<span class="demo">문화재 사례</span>		
+				<span class="sdemo">					
+				</span>	
+			</div>				
+			<div class="marB100"></div>
+		</div>	
+		<div class="copyright">
+			<div class="h-center">
+				<div class="copyright-lft">
+					<div class="copyright-txt">  Copyrights ⓒ  All rights reserved by Gaia3D , Inc.  </div>
+					<div class="corp-t">가이아쓰리디㈜ </div>
+					<div class="corp-info">서울 금천구 벚꽃로 278 SJ테크노빌 702호<br />
+						T. 02 3397 3475     F. 02 6767 0979<br />
+						<a href="mailto:info@gaia3d.com">info@gaia3d.com</a></div>
+				</div>
+				<div class="copyright-rgt">
+					<div class="copyright-rgt">
+						<ul>
+							<li><a href="index.html">About</a>
+								<ul>
+									<li>개요</li>
+									<li>특징</li>
+									<li>흐름도</Li>
+									<li>적용분야</li>
+									<li>미래</li>
+								</ul>
+							</li>
+							<li><a class="footer-title" href="product.html">Product</a>
+								<ul>
+									<li>CE/EE</li>
+									<li>아키텍쳐</li>
+									<li>구성요소</li>
+									<li>다운로드</li>
+									<li>제품사양서</li>								
+									<li>가격정책</li>	
+								</ul>
+							</li>
+							<li><a class="footer-title" href="tech.html">Tech</a>
+								<ul>
+									<li>자동변환</li>
+									<li>시뮬레이션</li>
+									<li>센서데이터</li>
+								</ul>
+							</li>
+							<li><a class="footer-title" href="demo.html">Demo</a>
+								<ul>
+									<li>건축/건물/시설물</li>
+									<li>조선/항만/해양</li>
+									<li>환경</li>
+									<li>교통/항공</li>
+									<li>국방/기터</li>
+								</ul>
+							</li>
+							<li><a class="footer-title" href="support.html">Support</a>
+								<ul>
+									<li>설치가이드</li>
+									<li>사용자가이드</li>
+									<li>FAQ</li>
+									<li>Contact</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				<div id="topBtn" class="top-button" style="display:none;"></div>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>

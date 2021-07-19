@@ -1,0 +1,258 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="mago3d Digital Twin Platform" />
+<meta name="Keywords" content="mago3d Digital Twin Platform" />
+<meta name="author" content="mago3d Digital Twin Platform" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<title>mago3d Digital Twin Platform</title>
+<link rel="stylesheet" href="../../include/en/css/layout.css" />
+<script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
+<script src="../../include/en/js/controll.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<div class="top02">
+			<header class="nav">
+				<div class="h-center">
+					<h1 class="mago3d"><a href="#" class="blind">mago3d</a></h1>
+					<ul class="gnb">
+						<li><a href="index.html">About</a></li>
+						<li><a href="product.html">Product</a></li>
+						<li><a href="tech.html" class="on">Tech</a></li>
+						<li><a href="demo.html">Demo</a></li>
+						<li><a href="support.html">Support</a></li>
+					</ul>
+					<a href="../../html/ko/index.html" class="go-korean">KOREAN</a>
+				</div>
+			</header>
+		</div>	
+		<div class="h-center">
+			<h2>Data automatic conversion</h2>
+			<h3>
+				This is a function that converts various types of 3D data such as citygml, indoorgml, ifc, 3ds, obj, collada(dae) into a format that a web browser can visualize. <br />
+				When a user uploads a 3D file they own, selects the necessary options for conversion, and clicks the Convert button,<br />
+				The 3D file is automatically converted and displayed on the web page.</h3>		
+			<div class="tbl-spec">
+				<table>
+					<caption></caption>
+					<colgroup>
+						<col width="30%" />
+						<col width="70%" />
+					</colgroup>
+					<tr>
+			 			<th class="fs-up">smart tile</th>
+			 			<td class="comment">
+			 				<ul>
+			 					<li>Smart tile stores 3D data in a pyramid tile structure and does not retrieve the entire data, only the tile data that enters the screen and measures the distance from the camera is used to optimize 3D visualization performance.<br />
+			 					<a href="#" onclick="maintenanceAlert()">View spec documentation <img src="../../include/en/images/bullet_dn.png" class="dnimg" alt="" /></a></li>
+			 				</ul>
+			 			</td>
+			 		</tr>
+			 		<tr>
+			 			<th class="fs-up">F4D Converter</th>
+			 			<td class="comment">
+			 				<ul>
+			 					<li>Converts 3D files (citygml, indoorgml, ifc, 3ds, obj, collada(dae), etc.) to a format that a web browser can visualize<br />
+			 					 <a href="https://www.slideshare.net/ShinHayan/f4d-specification-document-v1">View spec documentation <img src="../../include/en/images/bullet_dn.png" class="dnimg" alt="" /></a></li>
+			 				</ul>
+			 			</td>
+			 		</tr>
+			 		<tr>
+			 			<th class="fs-up">Terrain</th>
+			 			<td class="comment">
+			 				<ul>
+			 					<li>Create tiles through DEM data to visualize 3D topographic information<br />
+			 					<a href="#" onclick="maintenanceAlert()">Cesium Trrain ToolKit View technical guide article<img src="../../include/en/images/bullet_dn.png" class="dnimg" alt="" /></a></li>
+			 				</ul>
+			 			</td>
+			 		</tr>
+			 	</table>
+			</div>
+			<div class="marT70"></div>
+			<h4 class="ce">3D supported formats</h4>
+			<div class="tbl-spec">
+				<table>
+					<caption></caption>
+					<colgroup>
+						<col width="30%" />
+						<col width="55%" />
+						<col width="150%" />
+					</colgroup>
+					<tr>
+						<th>Format</th>
+						<th>Description</th>
+						<th>Extension</th>
+					</tr>
+					<tr>
+			 			<td class="rg-line">IFC(Industry Foundation Classes)</td>
+			 			<td class="rg-line">Standard format for exchanging architectural BIM information</td>
+			 			<td>ifc</td>
+			 		</tr>
+			 		<tr>
+			 			<td class="rg-line">3DS(3D Studio File Format)</td>
+			 			<td class="rg-line">File format used by AutoDesk's 3D Studio</td>
+			 			<td>3ds</td>
+			 		</tr>
+			 		<tr>
+			 			<td class="rg-line">OBJ(Wavefront File Format Specification) </td>
+			 			<td class="rg-line">3D file format containing 3D coordinates (polygonal lines and points), texture mapping, and other object information</td>
+			 			<td>obj</td>
+			 		</tr>
+			 		<tr>
+			 			<td class="rg-line">COLLADA(COLLAborative Design Activity)</td>
+			 			<td class="rg-line">XML schema-based open standard format for exchanging 3D data</td>
+			 			<td>dae</td>
+			 		</tr>
+			 		<tr>
+			 			<td class="rg-line">GML(Geography Markup Language)<br />
+			 				XML(eXtensible Markup Language)<br />
+			 				CityGML(City Geography Markup Language)</td>
+			 			<td class="rg-line">An information model description language for exchanging and storing XML-based geographic information developed by the Open Geospatial Consortium (OGC).</td>
+			 			<td>gml, xml, citygml</td>
+			 		</tr>
+			 		<tr>
+			 			<td class="rg-line">LAS(LASer) point cloud format</td>
+			 			<td class="rg-line">An open binary format designated by ASPRS (American Society for Photogrammetry and Remote Sensing), a file format designed for the exchange and storage of Lidar point cloud data.</td>
+			 			<td>las</td>
+			 		</tr>
+			 		<tr>
+			 			<td class="rg-line">JT(Jupiter Tessellation)</td>
+			 			<td class="rg-line">Lightweight 3D model format developed by Siemens PLM Software</td>
+			 			<td>jt</td>
+			 		</tr>
+			 	</table>
+			</div>
+			<h2>Digital twin simulation </h2>	
+			<h3>In the mago3D platform, 3D library, Extrusion Building , Wind Simulation, <br />
+				Various simulations such as water simulation and land slide simulation are supported. <br />
+				In addition, scalability and maintenance are easy through rule-based, 2D/3D data property management.
+			</h3>
+			<div class="imgbx-lft"><img src="../../include/en/images/ex_techimg.png" alt="3d라이브러리 예시" /></div>
+			<div class="txtbx-rgt">
+					<h4 class="tech">3D library</h4>
+					The 3D library provides a SimCity simulation function using 3D data such as street trees, street lights, and bridges.
+					You can place the 3D library at the desired location in the form of points and lines.<br />
+					(Use cases: streetscape, night lighting, tree placement simulation, etc.)
+				</div>	
+			<div class="marB120"></div>
+			<div class="imgbx-rgt"><img src="../../include/en/images/ex_techimg06.png" alt="extrusion building 예시" /></div>
+			<div class="txtbx-lft">
+					<h4 class="tech">Extrusion Building</h4>
+					Extrusion Building is an integrated building system provided by the Ministry of Land, Infrastructure and Transport. <br />Visualize 3D buildings based on master data (2D Shape).
+			</div>	
+			<div class="marB120"></div>
+			<div class="imgbx-lft"><img src="../../include/en/images/ex_techimg02.png" alt="Wind Simulation 예시" /></div>
+			<div class="txtbx-rgt">
+					<h4 class="tech">Wind Simulation</h4>
+					Wind Simulation creates and visualizes wind field model data (Grib, Hdf, etc.) as Geojson + PNG through post-processing. <br />
+					As a use case, the wind field of AlphaMet, a numerical model detailed using DEM/DSM data of Nanoweather, was expressed in mago3D.
+			</div>
+			<div class="marB120"></div>
+			<div class="imgbx-rgt"><img src="../../include/en/images/ex_techimg03.png" alt="Wind Simulation 예시" /></div>
+			<div class="txtbx-lft">
+					<h4 class="tech">Water Simulation</h4>
+					Water Simulation can visualize sewage or oil spills for use cases of hydraulic/sluice and water quality modeling simulation visualization.
+			</div>
+			<div class="marB120"></div>
+			<div class="imgbx-lft"><img src="../../include/en/images/ex_techimg07.png" alt="Landslide Simulation 예시" /></div>
+			<div class="txtbx-rgt">
+				<h4 class="tech">Landslide Simulation</h4>
+				Landslide Simulation visualizes landslide modeling simulations.
+			</div>					
+			<h2>Real-time sensor data (IoT) </h2>	
+			<h3>mago3D provides various methods to link and visualize real-time simulation sensor data.<br />
+				The most representative method is the form of interlocking the OGC standard specification, SensorThings API.<br />
+				After storing and managing data using SensorThing API, and retrieving data through REST API, it is visualized using mago3D JS visualization engine. 
+			</h3>
+			<h4 class="ogc">Using the OGC standard SensorThings API</h4>
+			<h5 class="w1300">An International Organization for Standardization (OGC) standard specification for interconnecting Internet of Things devices, data, and applications over the web.<br />
+				<ul>
+					<li>SensorThings API? technical documentation
+				</li>
+					<li><a href="http://docs.opengeospatial.org/is/15-078r6/15-078r6.html">OGC SensorThings API Part1  <img src="../../include/en/images/bullet_dn.png" class="dnimg" alt="" /></a> 
+				</li>
+					<li><a href="https://docs.opengeospatial.org/is/17-079r1/17-079r1.html">OGC SensorThings API Part2  <img src="../../include/en/images/bullet_dn.png" class="dnimg" alt="" /></a>
+				</li>				
+				</ul>
+			</h5>
+			<div class="marB120"></div>
+			<div class="imgbx-lft"><img src="../../include/en/images/ex_techimg04.png" alt="Example of real-time building occupant data display" /></div>
+			<div class="txtbx-rgt">
+					<h4 class="tech">Real-time building occupant data display</h4>
+					Real-time sensor data will play an important role in digital twins as it can inform users of what is happening right away. <br />
+					Occupant sensing data on the demo page is randomly generated every 10 minutes. 
+			</div>
+			<div class="marB120"></div>
+			<div class="imgbx-rgt"><img src="../../include/en/images/ex_techimg05.png" alt="Example of real-time air quality data display (AirKorea OpenAPI)" /></div>
+			<div class="txtbx-lft">
+					<h4 class="tech">Real-time air quality data display (AirKorea OpenAPI)</h4>
+					Air quality real-time data is used in conjunction with AirKorea OpenAPI.<br />
+					Real-time data provided by Air Korea is automatically processed on the mago3D platform. mago3D is ready to provide users with optimal answers. 
+			</div>
+		</div>	
+		<div class="marB100"></div>
+		<div class="copyright">
+			<div class="h-center">
+				<div class="copyright-lft">
+					<div class="copyright-txt">  Copyrights ⓒ  All rights reserved by Gaia3D , Inc.  </div>
+					<div class="corp-t">Gaia 3D Co. Ltd. </div>
+					<div class="corp-info">#702 SJ Technoville, 278, Cherry Blossom-ro, Geumcheon-gu, Seoul<br />
+						T. 02 3397 3475     F. 02 6767 0979<br />
+						<a href="mailto:info@gaia3d.com">info@gaia3d.com</a></div>
+				</div>
+				<div class="copyright-rgt">
+					<ul>
+						<li><a href="index.html">About</a>
+							<ul>
+								<li>summary</li>
+								<li>Characteristic</li>
+								<li>flow chart</Li>
+								<li>Applications</li>
+								<li>future</li>
+							</ul>
+						</li>
+						<li><a class="footer-title" href="product.html">Product</a>
+							<ul>
+								<li>CE/EE</li>
+								<li>architecture</li>
+								<li>Component</li>
+								<li>Download</li>
+								<li>product specification sheet</li>								
+								<li>Pricing</li>	
+							</ul>
+						</li>
+						<li><a class="footer-title" href="tech.html">Tech</a>
+							<ul>
+								<li>automatic conversion</li>
+								<li>simulation</li>
+								<li>sensor data</li>
+							</ul>
+						</li>
+						<li><a class="footer-title" href="demo.html">Demo</a>
+							<ul>
+								<li>Architecture/Building/Facility</li>
+								<li>Shipbuilding/Port/Marine</li>
+								<li>Environment</li>
+								<li>Transportation/Air</li>
+								<li>Defense/Others</li>
+							</ul>
+						</li>
+						<li><a class="footer-title" href="support.html">Support</a>
+							<ul>
+								<li>installation guide</li>
+								<li>User Guide</li>
+								<li>FAQ</li>
+								<li>Contact</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="topBtn" class="top-button" style="display:none;"></div>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>

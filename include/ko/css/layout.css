@@ -100,8 +100,8 @@ ul.gnb li a:hover, ul.gnb li a.on {display:inline-block; border-top:2px solid #6
 .go-english:hover {color:white; opacity:1;}
 .go-korean {float:right; color:white; opacity:0.8; border:1px solid white; padding:3px 8px; }
 .go-korean:hover {color:white; opacity:1;}
-.topimg {width:1400px; margin:0 auto; min-width:1400px; padding-top:150px;}
-.big-t { font-size:46px; color:white; font-family: 'NotoKrB';}
+.topimg {width:1400px; margin:0 auto; min-width:1400px; padding-top:110px;}
+.big-t { font-size:50px; color:white; font-family: 'NotoKrB';}
 .mdl-t {font-size:22px; color:white; margin-top:20px; letter-spacing:1px;}
 .godemo {display:inline-block; padding:8px 50px 8px 20px; font-weight:600; font-size:20px; color:white; background:#ff6d1d url(../images/bullet_go.png) 92% 50% no-repeat; margin-top:90px; }
 .godemo:hover {background:#00c2e2 url(../images/bullet_go.png) 92% 50% no-repeat; color:white; transition:0.3s;}

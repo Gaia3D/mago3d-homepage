@@ -23,24 +23,24 @@
             background-color: rgb(0,0,0); /* Fallback color */
             background-color: rgba(0, 0, 0, 0.719); /* Black w/ opacity */
         }
-    
+
 </style>
 <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
 <script src="../include/js/controll.js"></script>
 <script type="text/javascript">
 	var nav = document.getElementsByTagName("header");
-	$(function(){ 
+	$(function(){
 		var modal = document.getElementById("modal");
 		var modalContent = document.getElementById("modal-content");
 		$(".play").click(function(){
 			$('#modal-content').attr('src', $(this).attr("value"));
-			modal.style.display = "block"; 
-		}); 
+			modal.style.display = "block";
+		});
 		window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-        } 
+        }
 	});
 </script>
 
@@ -69,98 +69,100 @@
 		</div>
 		<div class="h-center">
 			<h2 id="demo01" class="marT80">
-				Architecture/Building/Facility</h2>			
+				Architecture/Building/Facility</h2>
 			<div class="marT70"></div>
 			<div class="lf-bx">
 				<div class="demo-bx"><span class="play" value="demo01"></span><img src="../include/images/demo01.png" alt="lh데모" /></div>
 				<div class="demo-comment">
-					<span class="demo">LH Digitagl Twin Stage 1 business performance</span>		
+					<span class="demo">LH Digital Twin phase 1 business performance</span>
 					<span class="sdemo">
-					This is a video of the performance of the LH Corporation Digital Twin Phase 1 construction project, which was carried out from June 2020 to March 2021. <br />					
-					The main contents of the LH Digital Twin Phase 1 project are: 1. 3D data construction and service for the 3rd new city, 2. Development of district planning/landscape simulation functions,
-					3. This is an IoT connection service using the OGC SensorThings API.
-					</span>	
-				</div>		
+						This video shows the Digital Twin performance of LH corporation phase 1 construction project, carried out from June 2020 to March 2021.​
+						The main contents of phase 1 project are : ​<br/>
+						1. 3D data deployment and services for 3rd new city​ <br/>
+						2. Development of district planning/scenery simulation functions​<br/>
+						3. This is IoT-linked service using OGC SensorThings API.
+					</span>
+				</div>
 			</div>
 			<div class="rg-bx">
 				<div class="demo-bx"><span class="play" value="https://www.youtube.com/embed/Vqix5vtUEhk"></span><img src="../include/images/demo05.png" alt="cityGml데모" /></div>
-				<div class="demo-comment">					
-					<span class="demo">CityGML and IndoorGML</span>		
+				<div class="demo-comment">
+					<span class="demo">CityGML and IndoorGML</span>
 					<span class="sdemo">
 					This is an example of CityGML and IndoorGML data expressed in mago3D.<br/>
 					(This case is the result of a research conducted with the research grant (18NSIP-B135746-02) from the Ministry of Land, Infrastructure and Transport’s Land Geospatial Information Research Project.)
 					 <br /> <br /> <br />
-					</span>	
-				</div>			
-			</div>	
-			<div class="marT70"></div>	
+					</span>
+				</div>
+			</div>
+			<div class="marT70"></div>
 			<div class="lf-bx">
 				<div class="demo-bx"><span class="play" value="demo01"></span><img src="../include/images/demo06.png" alt="Indoor/Outdoor Connection Demo" /></div>
 				<div class="demo-comment">
-					<span class="demo">Indoor/Outdoor Connection Demo</span>		
-					<span class="sdemo">	
-					mago3D can link indoors and outdoors of buildings built with BIM without interruption on geographic information. You can view the outside view through the window from the inside.
-					<br /> <br />				
-					</span>	
-				</div>	
+					<span class="demo">Indoor/Outdoor Connection Demo</span>
+					<span class="sdemo">
+						Mago3D can link indoor space of buildings with outdoors while avoiding collision with geographic information.​<br />
+						It is also possible to see the outdoor space from the indoors through the transparent objects like windows.
+					</span>
+				</div>
 			</div>
 			<div class="rg-bx">
 				<div class="demo-bx"><span class="play" value="demo01"></span><img src="../include/images/demo09.png" alt="Antarctic Science Station Demo" /></div>
 				<div class="demo-comment">
-					<span class="demo">Antarctic Science Base Web-based 3D facility/equipment management system</span>		
+					<span class="demo">Web based 3D facility/equipment management system (Antarctic Science Base example)</span>
 					<span class="sdemo">
-					Build 3D data for Sejong Base building and equipment management and utilize the mago3D platform.
-					We have developed a web-based facility management system that can visualize and manage each facility in three dimensions.
-					</span>	
-				</div>			
-			</div>	
-			<div class="marT70"></div>	
+						Using mago3D platform to build and visualize Sejong base building and equipment management in 3D.​ <br/>
+						We developed a web-based facility management system that allows visualizing and managing each facility in three dimensions.
+					</span>
+				</div>
+			</div>
+			<div class="marT70"></div>
 			<div class="demo-bx"><span class="play" value="https://www.youtube.com/embed/b1ZW_8gTOOI"></span><img src="../include/images/demo08.png" alt="mago3D integration demo" /></div>
 			<div class="demo-comment">
-				<span class="demo">mago3D integrated demo video</span>		
+				<span class="demo">mago3D integrated demo video</span>
 				<span class="sdemo">
 					This is a mago3D integrated demo video. You can quickly visualize various 3D design data such as BIM, OBJ, and COLLADA on the web and perform property inquiry.
-				</span>	
-			</div>		
-			<h2 id="demo02" class="marB70">Shipbuilding/Port/Marine</h2>			
+				</span>
+			</div>
+			<h2 id="demo02" class="marB70">Shipbuilding/Port/Marine</h2>
 			<div class="demo-bx"><span class="play" value="demo01"></span><img src="../include/images/demo04.png" alt="port demonstration" /></div>
 			<div class="demo-comment">
-				<span class="demo">Port, container, ship structure</span>		
+				<span class="demo">Port, containers, ships</span>
 				<span class="sdemo">
-					It manages moving objects such as containers and ship structures in the port, and manages safety in the port through IoT sensor data interlocking.
-				</span>	
-			</div>		
+					It manages moving objects such as containers and ships in the port, and checks safety in the port through IoT sensor data interconnection.
+				</span>
+			</div>
 			<h2 id="demo03" class="marB70">Environment</h2>
 			<div class="demo-bx"><span class="play" value="demo01"></span><img src="../include/images/demo02.png" alt="Jeju Island 30m wind field demo" /></div>
 			<div class="demo-comment">
-				<span class="demo">Jeju Island 30m wind field expression</span>		
+				<span class="demo">Jeju Island 30m wind field expression</span>
 				<span class="sdemo">
-					This is a demonstration of expressing the wind field of Alphamet, a numerical model detailed using DEM data of Nanoweather, in mago3D.
-				</span>	
-			</div>		
+					This demonstration shows 30-meter resolution wind fields above Jeju Island, modeled using the alphamet of Nanoweather Co., Ltd. in mago3D.
+				</span>
+			</div>
 			<h2 id="demo04" class="marB70">Transportation/Air</h2>
 			<div class="demo-bx"><span class="play" value="https://www.youtube.com/embed/x2XI8q6Onjg"></span><img src="../include/images/demo03.png" alt="traffic" /></div>
 			<div class="demo-comment">
-				<span class="demo">vehicle control</span>		
+				<span class="demo">Vehicle control</span>
 				<span class="sdemo">
-					This is a demonstration of visualizing the Songdo point cloud in mago3D and controlling the vehicle on the road.
-				</span>	
-			</div>		
-			<h2 id="demo05" class="marB70">Defense/Others</h2>	
+					This is a demonstration that displays point cloud data in Songdo area, Incheon, in mago3D and utilizes it for vehicle control.
+				</span>
+			</div>
+			<h2 id="demo05" class="marB70">Defense/Others</h2>
 			<div class="demo-bx"><span class="play" value="demo01"></span><img src="../include/images/demo07.png" alt="Cultural Heritage" /></div>
 			<div class="demo-comment">
-				<span class="demo">Cultural Heritage Examples</span>		
-				<span class="sdemo">					
-				</span>	
-			</div>				
+				<span class="demo">Through accurate measurement, cultural assets reconstructed with BIM can also be displayed and managed in mago3D.</span>
+				<span class="sdemo">
+				</span>
+			</div>
 			<div class="marB100"></div>
-		</div>	
+		</div>
 		<div class="copyright">
 			<div class="h-center">
 				<div class="copyright-lft">
 					<div class="copyright-txt">  Copyrights ⓒ  All rights reserved by Gaia3D , Inc.  </div>
 					<div class="corp-t">Gaia 3D Co. Ltd. </div>
-					<div class="corp-info">#702 SJ Technoville, 278, Cherry Blossom-ro, Geumcheon-gu, Seoul<br />
+					<div class="corp-info">#702 SJ Techno Ville, 278, Beotkkot-ro, Geumcheon-gu, Seoul<br />
 						T. 02 3397 3475     F. 02 6767 0979<br />
 						<a href="mailto:info@gaia3d.com">info@gaia3d.com</a></div>
 				</div>
@@ -169,28 +171,28 @@
 						<ul>
 							<li><a href="index.html">About</a>
 								<ul>
-									<li>summary</li>
+									<li>Summary</li>
 									<li>Characteristic</li>
-									<li>flow chart</Li>
+									<li>Flow chart</Li>
 									<li>Applications</li>
-									<li>future</li>
+									<li>Future</li>
 								</ul>
 							</li>
 							<li><a class="footer-title" href="product.html">Product</a>
 								<ul>
 									<li>CE/EE</li>
-									<li>architecture</li>
+									<li>Architecture</li>
 									<li>Component</li>
 									<li>Download</li>
-									<li>product specification sheet</li>								
-									<li>Pricing</li>	
+									<li>Product specification sheet</li>
+									<li>Pricing</li>
 								</ul>
 							</li>
 							<li><a class="footer-title" href="tech.html">Tech</a>
 								<ul>
-									<li>automatic conversion</li>
-									<li>simulation</li>
-									<li>sensor data</li>
+									<li>Automatic conversion</li>
+									<li>Simulation</li>
+									<li>Sensor data</li>
 								</ul>
 							</li>
 							<li><a class="footer-title" href="demo.html">Demo</a>
@@ -204,7 +206,7 @@
 							</li>
 							<li><a class="footer-title" href="support.html">Support</a>
 								<ul>
-									<li>installation guide</li>
+									<li>Installation guide</li>
 									<li>User Guide</li>
 									<li>FAQ</li>
 									<li>Contact</li>
@@ -214,7 +216,7 @@
 					</div>
 				<div id="topBtn" class="top-button" style="display:none;"></div>
 			</div>
-		</div>		
+		</div>
 	</div>
 </body>
 </html>

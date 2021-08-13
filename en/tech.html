@@ -28,13 +28,13 @@
 					<a href="../../ko/index.html" class="go-korean">KOREAN</a>
 				</div>
 			</header>
-		</div>	
+		</div>
 		<div class="h-center">
 			<h2>Data automatic conversion</h2>
 			<h3>
 				This is a function that converts various types of 3D data such as citygml, indoorgml, ifc, 3ds, obj, collada(dae) into a format that a web browser can visualize. <br />
 				When a user uploads a 3D file they own, selects the necessary options for conversion, and clicks the Convert button,<br />
-				The 3D file is automatically converted and displayed on the web page.</h3>		
+				The 3D file is automatically converted and displayed on the web page.</h3>
 			<div class="tbl-spec">
 				<table>
 					<caption></caption>
@@ -43,7 +43,7 @@
 						<col width="70%" />
 					</colgroup>
 					<tr>
-			 			<th class="fs-up">smart tile</th>
+			 			<th class="fs-up">Smart tile</th>
 			 			<td class="comment">
 			 				<ul>
 			 					<li>Smart tile stores 3D data in a pyramid tile structure and does not retrieve the entire data, only the tile data that enters the screen and measures the distance from the camera is used to optimize 3D visualization performance.<br />
@@ -125,8 +125,8 @@
 			 		</tr>
 			 	</table>
 			</div>
-			<h2>Digital twin simulation </h2>	
-			<h3>In the mago3D platform, 3D library, Extrusion Building , Wind Simulation, <br />
+			<h2>Digital twin simulation </h2>
+			<h3>In the mago3D platform, 3D library, Building Extrusion , Wind Simulation, <br />
 				Various simulations such as water simulation and land slide simulation are supported. <br />
 				In addition, scalability and maintenance are easy through rule-based, 2D/3D data property management.
 			</h3>
@@ -136,70 +136,68 @@
 					The 3D library provides a SimCity simulation function using 3D data such as street trees, street lights, and bridges.
 					You can place the 3D library at the desired location in the form of points and lines.<br />
 					(Use cases: streetscape, night lighting, tree placement simulation, etc.)
-				</div>	
+				</div>
 			<div class="marB120"></div>
 			<div class="imgbx-rgt"><img src="../include/images/ex_techimg06.png" alt="extrusion building 예시" /></div>
 			<div class="txtbx-lft">
-					<h4 class="tech">Extrusion Building</h4>
-					Extrusion Building is an integrated building system provided by the Ministry of Land, Infrastructure and Transport. <br />Visualize 3D buildings based on master data (2D Shape).
-			</div>	
+					<h4 class="tech">Building Extrusion </h4>
+					Building extrusion is an integrated system that transforms 2D data, more specifically buildings provided by the Ministry of Land, Infrastructure and Transport to 3D buildings.
+			</div>
 			<div class="marB120"></div>
 			<div class="imgbx-lft"><img src="../include/images/ex_techimg02.png" alt="Wind Simulation 예시" /></div>
 			<div class="txtbx-rgt">
 					<h4 class="tech">Wind Simulation</h4>
-					Wind Simulation creates and visualizes wind field model data (Grib, Hdf, etc.) as Geojson + PNG through post-processing. <br />
-					As a use case, the wind field of AlphaMet, a numerical model detailed using DEM/DSM data of Nanoweather, was expressed in mago3D.
+					Wind simulation creates and visualizes wind field model data (GRIB, HDF...etc.) as Geojson +PNG through post-processing.​<br />
+					This is an example of the wind field of AlphaMet, a detailed nurmerical model visualized in mago3D using DEM/DSM data of Nanoweather.
 			</div>
 			<div class="marB120"></div>
 			<div class="imgbx-rgt"><img src="../include/images/ex_techimg03.png" alt="Wind Simulation 예시" /></div>
 			<div class="txtbx-lft">
 					<h4 class="tech">Water Simulation</h4>
-					Water Simulation can visualize sewage or oil spills for use cases of hydraulic/sluice and water quality modeling simulation visualization.
+					Using mago3D's water simulation technology, floods, wastewater spills, changes in water flow before and after construction can be visualized in real time.
 			</div>
 			<div class="marB120"></div>
 			<div class="imgbx-lft"><img src="../include/images/ex_techimg07.png" alt="Landslide Simulation 예시" /></div>
 			<div class="txtbx-rgt">
 				<h4 class="tech">Landslide Simulation</h4>
-				Landslide Simulation visualizes landslide modeling simulations.
-			</div>					
-			<h2>Real-time sensor data (IoT) </h2>	
-			<h3>mago3D provides various methods to link and visualize real-time simulation sensor data.<br />
-				The most representative method is the form of interlocking the OGC standard specification, SensorThings API.<br />
-				After storing and managing data using SensorThing API, and retrieving data through REST API, it is visualized using mago3D JS visualization engine. 
+				The mago3D platform allows you to modify terrain (such as excavation) in real time and simulate changes in the surrounding environment.
+			</div>
+			<h2>Real-time sensor data (IoT) </h2>
+			<h3>Mago3D provides various methods to link and visualize real-time sensor data. The representative method is interconnecting provided by the OGC standard SensorThingsAPI.​ <br />
+				After storing and managing data using SensorThings API, and retrieving data through REST API, it is visualized using mago3D JS rendering engine.
 			</h3>
 			<h4 class="ogc">Using the OGC standard SensorThings API</h4>
 			<h5 class="w1300">An International Organization for Standardization (OGC) standard specification for interconnecting Internet of Things devices, data, and applications over the web.<br />
 				<ul>
 					<li>SensorThings API? technical documentation
 				</li>
-					<li><a href="http://docs.opengeospatial.org/is/15-078r6/15-078r6.html">OGC SensorThings API Part1  <img src="../include/images/bullet_dn.png" class="dnimg" alt="" /></a> 
+					<li><a href="http://docs.opengeospatial.org/is/15-078r6/15-078r6.html">OGC SensorThings API Part1  <img src="../include/images/bullet_dn.png" class="dnimg" alt="" /></a>
 				</li>
 					<li><a href="https://docs.opengeospatial.org/is/17-079r1/17-079r1.html">OGC SensorThings API Part2  <img src="../include/images/bullet_dn.png" class="dnimg" alt="" /></a>
-				</li>				
+				</li>
 				</ul>
 			</h5>
 			<div class="marB120"></div>
 			<div class="imgbx-lft"><img src="../include/images/ex_techimg04.png" alt="Example of real-time building occupant data display" /></div>
 			<div class="txtbx-rgt">
-					<h4 class="tech">Real-time building occupant data display</h4>
-					Real-time sensor data will play an important role in digital twins as it can inform users of what is happening right away. <br />
-					Occupant sensing data on the demo page is randomly generated every 10 minutes. 
+					<h4 class="tech">Real-time building occupancy data simulation</h4>
+					Real-time sensor data plays an important role in digital twins as it can inform users of what is happening instantly.​<br />
+					Occupancy sensing data on the demo page is randomly generated every 10 minutes.
 			</div>
 			<div class="marB120"></div>
 			<div class="imgbx-rgt"><img src="../include/images/ex_techimg05.png" alt="Example of real-time air quality data display (AirKorea OpenAPI)" /></div>
 			<div class="txtbx-lft">
 					<h4 class="tech">Real-time air quality data display (AirKorea OpenAPI)</h4>
-					Air quality real-time data is used in conjunction with AirKorea OpenAPI.<br />
-					Real-time data provided by Air Korea is automatically processed on the mago3D platform. mago3D is ready to provide users with optimal answers. 
+					Real-time air quality data acquired from Air Korea is automatically processed and displayed on the mago3D platform to provide users with optimal and useful information.
 			</div>
-		</div>	
+		</div>
 		<div class="marB100"></div>
 		<div class="copyright">
 			<div class="h-center">
 				<div class="copyright-lft">
 					<div class="copyright-txt">  Copyrights ⓒ  All rights reserved by Gaia3D , Inc.  </div>
 					<div class="corp-t">Gaia 3D Co. Ltd. </div>
-					<div class="corp-info">#702 SJ Technoville, 278, Cherry Blossom-ro, Geumcheon-gu, Seoul<br />
+					<div class="corp-info">#702 SJ Techno Ville, 278, Beotkkot-ro, Geumcheon-gu, Seoul<br />
 						T. 02 3397 3475     F. 02 6767 0979<br />
 						<a href="mailto:info@gaia3d.com">info@gaia3d.com</a></div>
 				</div>
@@ -207,28 +205,28 @@
 					<ul>
 						<li><a href="index.html">About</a>
 							<ul>
-								<li>summary</li>
+								<li>Summary</li>
 								<li>Characteristic</li>
-								<li>flow chart</Li>
+								<li>Flow chart</Li>
 								<li>Applications</li>
-								<li>future</li>
+								<li>Future</li>
 							</ul>
 						</li>
 						<li><a class="footer-title" href="product.html">Product</a>
 							<ul>
 								<li>CE/EE</li>
-								<li>architecture</li>
+								<li>Architecture</li>
 								<li>Component</li>
 								<li>Download</li>
-								<li>product specification sheet</li>								
-								<li>Pricing</li>	
+								<li>Product specification sheet</li>
+								<li>Pricing</li>
 							</ul>
 						</li>
 						<li><a class="footer-title" href="tech.html">Tech</a>
 							<ul>
-								<li>automatic conversion</li>
-								<li>simulation</li>
-								<li>sensor data</li>
+								<li>Automatic conversion</li>
+								<li>Simulation</li>
+								<li>Sensor data</li>
 							</ul>
 						</li>
 						<li><a class="footer-title" href="demo.html">Demo</a>
@@ -242,7 +240,7 @@
 						</li>
 						<li><a class="footer-title" href="support.html">Support</a>
 							<ul>
-								<li>installation guide</li>
+								<li>Installation guide</li>
 								<li>User Guide</li>
 								<li>FAQ</li>
 								<li>Contact</li>
@@ -252,7 +250,7 @@
 				</div>
 				<div id="topBtn" class="top-button" style="display:none;"></div>
 			</div>
-		</div>		
+		</div>
 	</div>
 </body>
 </html>

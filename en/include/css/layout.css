@@ -84,7 +84,7 @@ img {border:0 none; vertical-align:top;}
 #wrap > .top {width:100%; height:818px; background:url(../images/img_main.png) no-repeat center center; background-size:cover;}
 #wrap > .top02 {width:100%; height:90px; background:url(../images/top_bg.png) no-repeat center center; background-size:cover;}
 header {width:100%; height:60px; margin:0 auto; padding:0; padding-top:30px; z-index:999; min-width:1400px; overflow:hidden;}
-.h-center {width:1400px; text-align:center; margin:0 auto; min-width:1400px; overflow:hidden;}
+.h-center {width:1600px; text-align:center; margin:0 auto; min-width:1400px; overflow:hidden;}
 .h-center02 {width:1200px; text-align:center; margin:0 auto; min-width:1200px; overflow:hidden;}
 .h-left {width:1400px; text-align:left; margin:0 auto; min-width:1400px;}
 .copyright {clear:both; width:100%; min-width:1400px; overflow:hidden; height:436px; background:url(../images/bg_bottom.png) repeat-x; }
@@ -196,13 +196,13 @@ span.email {background:url(../images/bullet_email.png) no-repeat; text-indent:50
 span.phone {background:url(../images/bullet_phone.png) no-repeat; text-indent:50px;}
 
 /* copyright */
-.copyright .copyright-lft {float:left; width:580px; margin:50px 0 0 0; padding:0; text-align:left;}
+.copyright .copyright-lft {float:left; width:500px; margin:50px 0 0 0; padding:0; text-align:left;}
 .copyright .copyright-lft > .copyright-txt {font-size:16px; font-family: 'NotoKrL'; color:white; font-weight:normal;}
 .copyright .copyright-lft > .corp-t {font-size:20px; color:white; margin-top:30px;}
 .copyright .copyright-lft > .corp-info {font-size:15px;  color:white; font-family: 'NotoKrL'; opacity:0.8; margin-top:5px;}
-.copyright .copyright-rgt {float:left; width:800px; margin:50px 0 0 0; padding:0; }
+.copyright .copyright-rgt {float:left; width:1100px; margin:50px 0 0 0; padding:0; }
 .copyright .copyright-rgt > ul {margin:0; padding:0;}
-.copyright .copyright-rgt > ul li {width:150px; list-style:none; display:inline-block; text-align:left; float:left; font-size:18px; color:white;}
+.copyright .copyright-rgt > ul li {width:220px; list-style:none; display:inline-block; text-align:left; float:left; font-size:18px; color:white;}
 .copyright .copyright-rgt > ul li > ul {margin:30px 0 0 0; padding:0;}
 .copyright .copyright-rgt > ul li > ul li {list-style:none; padding:5px 0; text-align:left; display:block; font-family: 'NotoKrL'; font-size:15px; color:white;}
 .footer-title {color: #ffffff;}

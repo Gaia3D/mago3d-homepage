@@ -90,7 +90,7 @@ header {width:100%; height:60px; margin:0 auto; padding:0; padding-top:30px; z-i
 .copyright {clear:both; width:100%; min-width:1400px; overflow:hidden; height:436px; background:url(../images/bg_bottom.png) repeat-x; }
 
 /*메인 */
-h1.mago3d {float:left; width:200px; cursor:pointer;height:30px;background:url(../images/mago.png) no-repeat;}
+h1.mago3d {float:left; width:250px; cursor:pointer;height:50px;background:url(../../images/mago.png) 0 -5px no-repeat;}
 ul.gnb {}
 ul.gnb li {font-size:18px; display:inline-block; float:left; font-family:arial; color:white; line-height:28px; font-weight:600; padding:0 20px;}
 ul.gnb li a {color:white; }
